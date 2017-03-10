@@ -79,6 +79,7 @@
 		51F403F41E72A57600B11946 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F403F21E72A57600B11946 /* Main.storyboard */; };
 		51F403F91E72A57600B11946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F403F81E72A57600B11946 /* Assets.xcassets */; };
 		51F403FC1E72A57600B11946 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F403FA1E72A57600B11946 /* LaunchScreen.storyboard */; };
+		51F404081E72B60400B11946 /* CategorieRij.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F404071E72B60400B11946 /* CategorieRij.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +157,7 @@
 		51F403F81E72A57600B11946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51F403FB1E72A57600B11946 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51F403FD1E72A57600B11946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51F404071E72B60400B11946 /* CategorieRij.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorieRij.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 				51F403FA1E72A57600B11946 /* LaunchScreen.storyboard */,
 				51F403FD1E72A57600B11946 /* Info.plist */,
 				41CB60E11E72A70100575A32 /* ASea.xcdatamodeld */,
+				51F404071E72B60400B11946 /* CategorieRij.swift */,
 			);
 			path = Accesseable;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51F404081E72B60400B11946 /* CategorieRij.swift in Sources */,
 				51F403F11E72A57600B11946 /* ViewController.swift in Sources */,
 				51F403EF1E72A57600B11946 /* AppDelegate.swift in Sources */,
 				41CB60E31E72A70100575A32 /* ASea.xcdatamodeld in Sources */,
@@ -542,6 +546,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = be.ehb.Accesseable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -555,6 +560,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = be.ehb.Accesseable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
