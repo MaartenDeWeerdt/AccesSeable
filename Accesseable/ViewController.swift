@@ -9,12 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
+    
+    @IBOutlet weak var lblObjectCell: UILabel!
+    
 
     var categorieën = ["Restaurants","Hotels", "Infokantoren", "Parkings", "Toiletten", "Tramhaltes", "Interessante locaties", "Dijken"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+         lblObjectCell.text = "\(DAO.sharedDAO.getAllRestaurants())"
     }
 
     override func didReceiveMemoryWarning() {

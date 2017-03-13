@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import CoreData
+
+
 public class JSONParser{
     
     func parseTramhaltes( context:NSManagedObjectContext)
@@ -28,9 +31,9 @@ public class JSONParser{
                
              
                 //strings omzetten waar nodig
-                let idStr = jsonObject.value(forKey: "stop_id") as! String
-                volgendeTramHalte.stop_id =  Int32.init(idStr)!
-                volgendeTramHalte.stop_name = jsonObject.value(forKey: "stop_name") as? String
+               
+                volgendeTram.stop_id = jsonObject.value(forKey: "stop_id") as? String
+                volgendeTram.stop_name = jsonObject.value(forKey: "stop_name") as? String
                 //rest keys nog niet geparset
             }
         } catch  {
@@ -58,7 +61,7 @@ public class JSONParser{
                     
                     //strings omzetten waar nodig
                    
-                    restaurant.adres_straat =  jsonObject.value(forKey: "adres_straat")
+                    restaurant.adres_straat =  jsonObject.value(forKey: "adres_straat") as! String?
                     restaurant.gemeente = jsonObject.value(forKey: "gemeente") as? String
                     //rest keys nog niet geparset
                 }

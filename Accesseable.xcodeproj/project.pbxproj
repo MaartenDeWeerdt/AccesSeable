@@ -178,6 +178,7 @@
 		419280F41E7689630010D833 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				512A43631E768A1B00A6FC4F /* AccesseableParser.swift */,
 				419280F51E7689BF0010D833 /* DAO.swift */,
 			);
 			name = CoreData;
@@ -285,7 +286,6 @@
 				51F403FD1E72A57600B11946 /* Info.plist */,
 				41CB60E11E72A70100575A32 /* ASea.xcdatamodeld */,
 				51F404071E72B60400B11946 /* CategorieRij.swift */,
-				512A43631E768A1B00A6FC4F /* AccesseableParser.swift */,
 			);
 			path = Accesseable;
 			sourceTree = "<group>";
