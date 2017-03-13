@@ -36,7 +36,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Kaart" selectedImage="myMarker.png" id="NDZ-dj-I5R"/>
+                    <tabBarItem key="tabBarItem" title="Kaart" image="myMarker.png" selectedImage="myMarker.png" id="NDZ-dj-I5R"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gex-f9-ALT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,7 +62,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lyi-nx-xvf" id="bMY-mh-ak6">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="129"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wnV-nM-WwJ">
@@ -189,7 +189,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Info" selectedImage="Info.png" id="uyi-GZ-8c3"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="Info.png" selectedImage="Info.png" id="uyi-GZ-8c3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ir-i0-Egf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,6 +201,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vNs-fL-3zV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="HEH-5H-fcW">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
