@@ -3,7 +3,6 @@
     {
       "orientation" : "portrait",
       "idiom" : "ipad",
-      "filename" : "accesseable.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
       "scale" : "1x"

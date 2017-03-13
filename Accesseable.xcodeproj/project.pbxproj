@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		419280F61E7689BF0010D833 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419280F51E7689BF0010D833 /* DAO.swift */; };
 		41CB60E31E72A70100575A32 /* ASea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41CB60E11E72A70100575A32 /* ASea.xcdatamodeld */; };
 		51118D771E76A7D900A1391C /* CategorieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51118D761E76A7D900A1391C /* CategorieCollectionViewCell.swift */; };
 		512A431D1E72AD3900A6FC4F /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 512A42DB1E72AD3900A6FC4F /* about.png */; };
