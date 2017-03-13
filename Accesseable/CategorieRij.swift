@@ -17,7 +17,10 @@ extension CategorieRij: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "objectCell", for: indexPath) 
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "objectCell", for: indexPath) as! CategorieCollectionViewCell
+        
+        
+        
         return cell
     }
 }
