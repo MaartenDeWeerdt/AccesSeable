@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		419280F61E7689BF0010D833 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419280F51E7689BF0010D833 /* DAO.swift */; };
 		41CB60E31E72A70100575A32 /* ASea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41CB60E11E72A70100575A32 /* ASea.xcdatamodeld */; };
 		51118D771E76A7D900A1391C /* CategorieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51118D761E76A7D900A1391C /* CategorieCollectionViewCell.swift */; };
 		512A431D1E72AD3900A6FC4F /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 512A42DB1E72AD3900A6FC4F /* about.png */; };
@@ -75,6 +76,7 @@
 		512A435C1E72AD3A00A6FC4F /* zeesterKleur.png in Resources */ = {isa = PBXBuildFile; fileRef = 512A431A1E72AD3900A6FC4F /* zeesterKleur.png */; };
 		512A435D1E72AD3A00A6FC4F /* ZeesterKleurFavoriet.png in Resources */ = {isa = PBXBuildFile; fileRef = 512A431B1E72AD3900A6FC4F /* ZeesterKleurFavoriet.png */; };
 		512A435E1E72AD3A00A6FC4F /* ZZZ.png in Resources */ = {isa = PBXBuildFile; fileRef = 512A431C1E72AD3900A6FC4F /* ZZZ.png */; };
+		512A43641E768A1B00A6FC4F /* AccesseableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A43631E768A1B00A6FC4F /* AccesseableParser.swift */; };
 		51F403EF1E72A57600B11946 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F403EE1E72A57600B11946 /* AppDelegate.swift */; };
 		51F403F11E72A57600B11946 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F403F01E72A57600B11946 /* ViewController.swift */; };
 		51F403F41E72A57600B11946 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F403F21E72A57600B11946 /* Main.storyboard */; };
@@ -84,6 +86,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		419280F51E7689BF0010D833 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		41CB60E21E72A70100575A32 /* ASea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASea.xcdatamodel; sourceTree = "<group>"; };
 		51118D761E76A7D900A1391C /* CategorieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorieCollectionViewCell.swift; sourceTree = "<group>"; };
 		512A42DB1E72AD3900A6FC4F /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
@@ -152,6 +155,7 @@
 		512A431A1E72AD3900A6FC4F /* zeesterKleur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zeesterKleur.png; sourceTree = "<group>"; };
 		512A431B1E72AD3900A6FC4F /* ZeesterKleurFavoriet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZeesterKleurFavoriet.png; sourceTree = "<group>"; };
 		512A431C1E72AD3900A6FC4F /* ZZZ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZZZ.png; sourceTree = "<group>"; };
+		512A43631E768A1B00A6FC4F /* AccesseableParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccesseableParser.swift; sourceTree = "<group>"; };
 		51F403EB1E72A57600B11946 /* Accesseable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Accesseable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F403EE1E72A57600B11946 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51F403F01E72A57600B11946 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +177,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		419280F41E7689630010D833 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				419280F51E7689BF0010D833 /* DAO.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		512A42DA1E72AB9F00A6FC4F /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +277,7 @@
 		51F403ED1E72A57600B11946 /* Accesseable */ = {
 			isa = PBXGroup;
 			children = (
+				419280F41E7689630010D833 /* CoreData */,
 				512A42DA1E72AB9F00A6FC4F /* Images */,
 				51F403EE1E72A57600B11946 /* AppDelegate.swift */,
 				51F403F01E72A57600B11946 /* ViewController.swift */,
@@ -311,6 +324,7 @@
 				TargetAttributes = {
 					51F403EA1E72A57500B11946 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = BPLNK8798C;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -419,6 +433,7 @@
 			files = (
 				51F404081E72B60400B11946 /* CategorieRij.swift in Sources */,
 				51F403F11E72A57600B11946 /* ViewController.swift in Sources */,
+				512A43641E768A1B00A6FC4F /* AccesseableParser.swift in Sources */,
 				51F403EF1E72A57600B11946 /* AppDelegate.swift in Sources */,
 				41CB60E31E72A70100575A32 /* ASea.xcdatamodeld in Sources */,
 				51118D771E76A7D900A1391C /* CategorieCollectionViewCell.swift in Sources */,
@@ -545,6 +560,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = BPLNK8798C;
 				INFOPLIST_FILE = Accesseable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = be.ehb.Accesseable;
@@ -559,6 +575,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = BPLNK8798C;
 				INFOPLIST_FILE = Accesseable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = be.ehb.Accesseable;

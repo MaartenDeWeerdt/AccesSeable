@@ -36,7 +36,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Kaart" selectedImage="myMarker.png" id="NDZ-dj-I5R"/>
+                    <tabBarItem key="tabBarItem" title="Kaart" image="myMarker.png" selectedImage="myMarker.png" id="NDZ-dj-I5R"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gex-f9-ALT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -233,7 +233,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Info" selectedImage="Info.png" id="uyi-GZ-8c3"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="Info.png" selectedImage="Info.png" id="uyi-GZ-8c3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ir-i0-Egf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -258,7 +258,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSk-U0-253" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="-4526" y="-428"/>
         </scene>
     </scenes>
     <resources>
