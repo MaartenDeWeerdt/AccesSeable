@@ -15,6 +15,8 @@ class ViewController: UIViewController, UITableViewDataSource,UICollectionViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+         lblObjectCell.text = "\(DAO.sharedDAO.getAllRestaurants())"
     }
 
     override func didReceiveMemoryWarning() {

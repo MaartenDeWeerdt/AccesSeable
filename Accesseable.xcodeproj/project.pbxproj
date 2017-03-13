@@ -180,6 +180,7 @@
 		419280F41E7689630010D833 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				512A43631E768A1B00A6FC4F /* AccesseableParser.swift */,
 				419280F51E7689BF0010D833 /* DAO.swift */,
 			);
 			name = CoreData;
