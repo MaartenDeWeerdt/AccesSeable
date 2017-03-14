@@ -100,6 +100,9 @@
                             <constraint firstAttribute="trailing" secondItem="k9D-yb-nWo" secondAttribute="trailing" id="v3g-gO-rGv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ivFeature" destination="k9D-yb-nWo" id="i1w-bC-RWV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDP-2k-UQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

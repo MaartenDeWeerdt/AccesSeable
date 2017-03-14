@@ -10,10 +10,33 @@ import UIKit
 
 class detailViewController: UIViewController {
 
+    @IBOutlet weak var ivFeature: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the vi
+        //connexion needed,can fail so try catch
+        
+        do {
+            //adress to image
+            let url = URL.init(string: "http://www.westkans.be/download/foto/POI-001.JPG")
+            //convert url tot data
+            let data = try Data.init(contentsOf: url!)
+            //convert data to image
+            let image = UIImage.init(data: data)
+            
+            ivFeature.image = image
+            
+        } catch  {
+            
+        }
+        
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
