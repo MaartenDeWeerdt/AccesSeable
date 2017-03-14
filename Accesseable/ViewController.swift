@@ -19,14 +19,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        rows.append(TableViewRow.init(title: "Restaurants", items: ["a","b","c","a","b","c"]))
-        rows.append(TableViewRow.init(title: "Hotels", items: ["a","b","c"]))
+        rows.append(TableViewRow.init(title: "Restaurants", items: DAO.sharedDAO.getAllRestaurants()!))
+        /*rows.append(TableViewRow.init(title: "Hotels", items: ["a","b","c"]))
         rows.append(TableViewRow.init(title: "Infokantoren", items: ["a","b","c"]))
         rows.append(TableViewRow.init(title: "Parkings", items: ["a","b","c"]))
         rows.append(TableViewRow.init(title: "Toiletten", items: ["a","b","c"]))
         rows.append(TableViewRow.init(title: "Tramhaltes", items: ["a","b","c"]))
         rows.append(TableViewRow.init(title: "Interessante locaties", items: ["a","b","c"]))
-        rows.append(TableViewRow.init(title: "Dijken", items: ["a","b","c"]))
+        rows.append(TableViewRow.init(title: "Dijken", items: ["a","b","c"]))*/
     }
 
     override func didReceiveMemoryWarning() {

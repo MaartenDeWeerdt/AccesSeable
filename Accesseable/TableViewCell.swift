@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class TableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var items:[String]?
+    var items:[NSManagedObject]?
     @IBOutlet weak var collectionView: UICollectionView!
     
     
@@ -40,7 +41,8 @@ class TableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionView
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! CollectionViewCell
         
-        cell.lblNaam.text = items?[indexPath.row]
+        let object:NSManagedObject = (items?[indexPath.row])!
+        cell.lblNaam.text = object.value(forKey: "naam") as! String?
         
         print("collection in cell")
         

@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import CoreData
 
 public class TableViewRow {
     
     var title:String
-    var items:[String]
+    var items:[NSManagedObject]
     
-    init(title:String, items:[String]) {
+    init(title:String, items:[NSManagedObject]) {
         self.title = title
         self.items = items
     }

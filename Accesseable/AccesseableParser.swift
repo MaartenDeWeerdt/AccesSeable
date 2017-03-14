@@ -61,8 +61,9 @@ public class JSONParser{
                     
                     //strings omzetten waar nodig
                    
-                    restaurant.adres_straat =  jsonObject.value(forKey: "adres_straat") as! String?
-                    restaurant.gemeente = jsonObject.value(forKey: "gemeente") as? String
+                    restaurant.adres_straat =  jsonObject.value(forKey: "ADRES_STRAAT") as! String?
+                    restaurant.gemeente = jsonObject.value(forKey: "GEMEENTE") as? String
+                    restaurant.naam = jsonObject.value(forKey: "NAAM") as? String
                     //rest keys nog niet geparset
                 }
             } catch  {
