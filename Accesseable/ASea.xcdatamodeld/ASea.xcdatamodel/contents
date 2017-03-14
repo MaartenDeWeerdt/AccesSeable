@@ -463,13 +463,13 @@
     </entity>
     <entity name="Tram" representedClassName="Tram" syncable="YES" codeGenerationType="class">
         <attribute name="location_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="naam" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="parent_station" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stop_code" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stop_desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stop_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stop_lat" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stop_lon" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="stop_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stop_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="weelchair_boarding" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="zone_id" optional="YES" attributeType="String" syncable="YES"/>
