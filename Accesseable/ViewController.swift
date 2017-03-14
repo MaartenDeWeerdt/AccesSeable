@@ -8,14 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource,UICollectionViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource {
 
     var categorieën = ["Restaurants","Hotels", "Infokantoren", "Parkings", "Toiletten", "Tramhaltes", "Interessante locaties", "Dijken"]
     
+    var rows = [TableViewRow]()
+    @IBOutlet weak var tabBarCollection: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        rows.append(TableViewRow.init(title: "Restaurants", items: ["a","b","c","a","b","c"]))
+        rows.append(TableViewRow.init(title: "Hotels", items: ["a","b","c"]))
+        rows.append(TableViewRow.init(title: "Infokantoren", items: ["a","b","c"]))
+        rows.append(TableViewRow.init(title: "Parkings", items: ["a","b","c"]))
+        rows.append(TableViewRow.init(title: "Toiletten", items: ["a","b","c"]))
+        rows.append(TableViewRow.init(title: "Tramhaltes", items: ["a","b","c"]))
+        rows.append(TableViewRow.init(title: "Interessante locaties", items: ["a","b","c"]))
+        rows.append(TableViewRow.init(title: "Dijken", items: ["a","b","c"]))
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,21 +35,25 @@ class ViewController: UIViewController, UITableViewDataSource,UICollectionViewDa
     }
 
     
-    //Tableview
     func numberOfSections(in tableView: UITableView) -> Int {
-        return categorieën.count
+        return rows.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return categorieën[section]
-    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return rows[section].title
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CategorieRij
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell") as! TableViewCell
+        
+        cell.items = rows[indexPath.section].items
+        print("cell made")
+        
         return cell
     }
     
@@ -54,7 +69,9 @@ class ViewController: UIViewController, UITableViewDataSource,UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let tabbar = collectionView.dequeueReusableCell(withReuseIdentifier: "tabbar", for: indexPath)
+        
         return tabbar
     }
+ 
 }
 

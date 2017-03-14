@@ -58,28 +58,28 @@
                                 <rect key="frame" x="16" y="108" width="343" height="502"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Lyi-nx-xvf" customClass="CategorieRij" customModule="Accesseable" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableCell" id="Lyi-nx-xvf" customClass="TableViewCell" customModule="Accesseable" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lyi-nx-xvf" id="bMY-mh-ak6">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="129"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wnV-nM-WwJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="343" height="129"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="uwc-eY-u2y">
-                                                        <size key="itemSize" width="113" height="114"/>
+                                                        <size key="itemSize" width="95" height="119"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="objectCell" id="UMH-wJ-Mag" customClass="CategorieCollectionViewCell" customModule="Accesseable" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="7.5" width="113" height="114"/>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="UMH-wJ-Mag" customClass="CollectionViewCell" customModule="Accesseable" customModuleProvider="target">
+                                                            <rect key="frame" x="5" y="5" width="95" height="119"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="113" height="114"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="95" height="119"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjD-gM-FRI">
@@ -126,6 +126,7 @@
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="08h-Y6-W5a">
                                         <rect key="frame" x="8" y="66" width="359" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gwx-1k-G6B">
                                             <size key="itemSize" width="113" height="28"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -178,10 +179,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" selectedImage="home.png" systemItem="search" id="4MC-CE-C2l"/>
+                    <connections>
+                        <outlet property="tabBarCollection" destination="08h-Y6-W5a" id="dcN-Ws-cgK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1000.8" y="-257.72113943028489"/>
+            <point key="canvasLocation" x="1000.8" y="-288.30584707646182"/>
         </scene>
         <!--Profiel-->
         <scene sceneID="jTd-6u-9Kl">
