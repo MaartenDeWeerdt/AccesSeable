@@ -18,7 +18,7 @@ public class DAO{
     
     lazy var persistentContainer: NSPersistentContainer = {
         
-        let container = NSPersistentContainer(name: "AccesseableREST")
+        let container = NSPersistentContainer(name: "ASea")
         
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             
