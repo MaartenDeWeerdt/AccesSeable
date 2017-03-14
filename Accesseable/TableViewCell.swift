@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-
+ //var tableData = []
 class TableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var items:[NSManagedObject]?
@@ -48,6 +48,35 @@ class TableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionView
         
         return cell
         
+   
+    
+    
     }
+    
+    /*func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cellsegue")
+       
+        if let rowData: NSDictionary = self.tableData[indexPath.row] as? NSDictionary,
+            // Prenez la clé ........... pour obtenir l'URL d'une image pour la miniature de l'application
+            let urlString = rowData[""] as? String,
+            // Créez une instance de NSURL à partir de l'URL sous forme de chaîne que nous recevons de l'API
+            let imgURL = NSURL(string: urlString),
+           
+            // Téléchargez une représentation NSData de l'image à cette URL
+            let imgData = NSData(contentsOf: imgURL as URL),
+            
+            
+            // Obtenez le titre du morceau
+            let nomMorceau = rowData[""] as? String {
+          
+            // Mettez à jour la cellule imageWiew pour afficher l'image téléchargée
+            cell.imageView?.image = UIImage(data: imgData as Data)
+            // Mettez à jour le texte de textLabel pour afficher le nom du morceau obtenu de l'API
+            cell.textLabel?.text = nomMorceau
+        }     
+        return cell
+    }
+    */
+    
 }
 
