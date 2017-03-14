@@ -79,6 +79,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             let latStr = Double(Reca.lat!)
             let lonStr = Double(Reca.lon!)
             annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
+            annotation.title = Reca.naam
             
             mapview.addAnnotation(annotation)
         

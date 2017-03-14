@@ -32,8 +32,8 @@ public class JSONParser{
              
                 //strings omzetten waar nodig
                
-                volgendeTram.stop_id = jsonObject.value(forKey: "STOP_ID") as? String
-                volgendeTram.naam = jsonObject.value(forKey: "STOP_NAME") as? String
+                volgendeTram.stop_id = jsonObject.value(forKey: "stop_id") as? String
+                volgendeTram.naam = jsonObject.value(forKey: "stop_name") as? String
                 volgendeTram.lat = jsonObject.value(forKey: "stop_lat") as? String
                 volgendeTram.lon = jsonObject.value(forKey: "stop_lon") as? String
                 //rest keys nog niet geparset
