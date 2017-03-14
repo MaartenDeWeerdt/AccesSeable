@@ -23,14 +23,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         rows.append(TableViewRow.init(title: "Hotels", items: DAO.sharedDAO.getAllHotels()))
         rows.append(TableViewRow.init(title: "Infokantoren", items: DAO.sharedDAO.getAllInfo()))
         rows.append(TableViewRow.init(title: "Parkings", items: DAO.sharedDAO.getAllParkings()))
-        
-        
-        /*
         rows.append(TableViewRow.init(title: "Toiletten", items: DAO.sharedDAO.getAllSanitair()))
         rows.append(TableViewRow.init(title: "Tramhaltes", items: DAO.sharedDAO.getAllTrams()!))
         rows.append(TableViewRow.init(title: "Interessante locaties", items: DAO.sharedDAO.getAllPOIs()!))
         rows.append(TableViewRow.init(title: "Dijken", items: DAO.sharedDAO.getAllDijken()!))
- */
     }
 
     override func didReceiveMemoryWarning() {
