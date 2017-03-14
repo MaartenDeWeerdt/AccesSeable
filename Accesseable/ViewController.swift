@@ -20,13 +20,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         
         rows.append(TableViewRow.init(title: "Restaurants", items: DAO.sharedDAO.getAllRestaurants()!))
-        /*rows.append(TableViewRow.init(title: "Hotels", items: ["a","b","c"]))
-        rows.append(TableViewRow.init(title: "Infokantoren", items: ["a","b","c"]))
-        rows.append(TableViewRow.init(title: "Parkings", items: ["a","b","c"]))
-        rows.append(TableViewRow.init(title: "Toiletten", items: ["a","b","c"]))
-        rows.append(TableViewRow.init(title: "Tramhaltes", items: ["a","b","c"]))
-        rows.append(TableViewRow.init(title: "Interessante locaties", items: ["a","b","c"]))
-        rows.append(TableViewRow.init(title: "Dijken", items: ["a","b","c"]))*/
+        rows.append(TableViewRow.init(title: "Hotels", items: DAO.sharedDAO.getAllHotels()))
+        rows.append(TableViewRow.init(title: "Infokantoren", items: DAO.sharedDAO.getAllInfo()))
+        rows.append(TableViewRow.init(title: "Parkings", items: DAO.sharedDAO.getAllParkings()))
+        
+        
+        /*
+        rows.append(TableViewRow.init(title: "Toiletten", items: DAO.sharedDAO.getAllSanitair()))
+        rows.append(TableViewRow.init(title: "Tramhaltes", items: DAO.sharedDAO.getAllTrams()!))
+        rows.append(TableViewRow.init(title: "Interessante locaties", items: DAO.sharedDAO.getAllPOIs()!))
+        rows.append(TableViewRow.init(title: "Dijken", items: DAO.sharedDAO.getAllDijken()!))
+ */
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,6 +76,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return tabbar
     }
- 
+
 }
 

@@ -463,13 +463,13 @@
     </entity>
     <entity name="Tram" representedClassName="Tram" syncable="YES" codeGenerationType="class">
         <attribute name="location_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="naam" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="parent_station" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stop_code" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stop_desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stop_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stop_lat" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stop_lon" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="stop_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stop_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="weelchair_boarding" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="zone_id" optional="YES" attributeType="String" syncable="YES"/>
@@ -477,11 +477,11 @@
     <entity name="VPP" representedClassName="VPP" syncable="YES" codeGenerationType="class">
         <attribute name="adres_nr" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="adres_straat" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="deelgemeente" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="gemeente" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id_westkans" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lat" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="naam" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="parking_aanduiding_omlijning" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="parking_aanduiding_score" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="parking_aanduiding_verkeersbord" optional="YES" attributeType="String" syncable="YES"/>
