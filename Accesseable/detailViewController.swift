@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class detailViewController: UIViewController {
 
     @IBOutlet weak var ivFeature: UIImageView!
     
+    @IBOutlet weak var tvFeature: UITextView!
+    var objectPassed:Reca?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +24,7 @@ class detailViewController: UIViewController {
         
         do {
             //adress to image
-            let url = URL.init(string: "http://www.westkans.be/download/foto/POI-001.JPG")
+            let url = URL.init(string: (objectPassed?.url_picture_extra1)!)
             //convert url tot data
             let data = try Data.init(contentsOf: url!)
             //convert data to image

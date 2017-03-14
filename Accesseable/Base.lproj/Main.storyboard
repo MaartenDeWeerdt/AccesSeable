@@ -102,6 +102,7 @@
                     </view>
                     <connections>
                         <outlet property="ivFeature" destination="k9D-yb-nWo" id="i1w-bC-RWV"/>
+                        <outlet property="tvFeature" destination="Wkr-ss-Fuh" id="b7D-F5-UIB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDP-2k-UQE" userLabel="First Responder" sceneMemberID="firstResponder"/>

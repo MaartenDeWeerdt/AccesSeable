@@ -33,7 +33,7 @@ public class JSONParser{
                 //strings omzetten waar nodig
                
                 volgendeTram.stop_id = jsonObject.value(forKey: "stop_id") as? String
-                volgendeTram.stop_name = jsonObject.value(forKey: "stop_name") as? String
+                volgendeTram.naam = jsonObject.value(forKey: "naam") as? String
                 //rest keys nog niet geparset
             }
         } catch  {
