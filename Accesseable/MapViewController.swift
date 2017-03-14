@@ -31,7 +31,17 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func viewWillAppear(_ animated: Bool) {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        createAnnotation()
+        //Annotations laten verschijnen
+        createRestaurantsAnnotation()
+        createTramsAnnotation()
+        createInfoAnnotation()
+        createParkingAnnotation()
+        createToilettenAnnotation()
+        createParkingAnnotation()
+        createToilettenAnnotation()
+        createPOIsAnnotation()
+        createDijkenAnnotation()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,14 +70,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     
-    func createAnnotation()
+    func createRestaurantsAnnotation()
     {
-        for item in DAO.sharedDAO.getAllRestaurants()!
+        for Reca in DAO.sharedDAO.getAllRestaurants()!
         {
             let annotation = MKPointAnnotation.init()
             
-            let latStr = Double(item.lat!)
-            let lonStr = Double(item.lon!)
+            let latStr = Double(Reca.lat!)
+            let lonStr = Double(Reca.lon!)
             annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
             
             mapview.addAnnotation(annotation)
@@ -75,5 +85,103 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
         
     }
+    
+    func createTramsAnnotation()
+    {
+        for Tram in DAO.sharedDAO.getAllTrams()!
+        {
+            let annotation = MKPointAnnotation.init()
+            
+            let latStr = Double(Tram.lat!)
+            let lonStr = Double(Tram.lon!)
+            annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
+            
+            mapview.addAnnotation(annotation)
+            
+        }
+        
+    }
+    
+    func createInfoAnnotation()
+    {
+        for Info in DAO.sharedDAO.getAllInfo()
+        {
+            let annotation = MKPointAnnotation.init()
+            
+            let latStr = Double(Info.lat!)
+            let lonStr = Double(Info.lon!)
+            annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
+            
+            mapview.addAnnotation(annotation)
+            
+        }
+        
+    }
+    
+    func createParkingAnnotation()
+    {
+        for Parking in DAO.sharedDAO.getAllParkings()
+        {
+            let annotation = MKPointAnnotation.init()
+            
+            let latStr = Double(Parking.lat!)
+            let lonStr = Double(Parking.lon!)
+            annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
+            
+            mapview.addAnnotation(annotation)
+            
+        }
+        
+    }
+    
+    func createToilettenAnnotation()
+    {
+        for Toilet in DAO.sharedDAO.getAllSanitair()
+        {
+            let annotation = MKPointAnnotation.init()
+            
+            let latStr = Double(Toilet.lat!)
+            let lonStr = Double(Toilet.lon!)
+            annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
+            
+            mapview.addAnnotation(annotation)
+            
+        }
+        
+    }
+    
+    func createPOIsAnnotation()
+    {
+        for POIs in DAO.sharedDAO.getAllPOIs()!
+        {
+            let annotation = MKPointAnnotation.init()
+            
+            let latStr = Double(POIs.lat!)
+            let lonStr = Double(POIs.lon!)
+            annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
+            
+            mapview.addAnnotation(annotation)
+            
+        }
+        
+    }
+    
+    func createDijkenAnnotation()
+    {
+        for Dijk in DAO.sharedDAO.getAllDijken()!
+        {
+            let annotation = MKPointAnnotation.init()
+            
+            let latStr = Double(Dijk.lat!)
+            let lonStr = Double(Dijk.lon!)
+            annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
+            
+            mapview.addAnnotation(annotation)
+            
+        }
+        
+    }
+    
+    
 
 }
