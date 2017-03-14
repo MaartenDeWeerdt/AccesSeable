@@ -10,7 +10,7 @@ import Foundation
 
 public class Restaurants{
     
-    let restaurants[]
+    
     
     
 }
