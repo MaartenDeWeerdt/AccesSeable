@@ -34,7 +34,7 @@ public class DAO{
     
     private init(){
         let parser = JSONParser()
-        
+        //*
             parser.parseTramhaltes(context: persistentContainer.viewContext)
             parser.parseRestaurants(context: persistentContainer.viewContext)
             parser.parseHotels(context: persistentContainer.viewContext)
@@ -43,7 +43,7 @@ public class DAO{
             parser.parseToiletten(context: persistentContainer.viewContext)
             parser.parseInfo(context: persistentContainer.viewContext)
             parser.parseParking(context: persistentContainer.viewContext)
-        
+        //*/
     }
     
     // MARK: - Core Data Fetch Request (restaurants)

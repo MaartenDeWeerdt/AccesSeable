@@ -32,8 +32,8 @@ public class JSONParser{
              
                 //strings omzetten waar nodig
                
-                volgendeTram.stop_id = jsonObject.value(forKey: "stop_id") as? String
-                volgendeTram.stop_name = jsonObject.value(forKey: "stop_name") as? String
+                volgendeTram.stop_id = jsonObject.value(forKey: "STOP_ID") as? String
+                volgendeTram.naam = jsonObject.value(forKey: "STOP_NAME") as? String
                 //rest keys nog niet geparset
             }
         } catch  {
@@ -74,7 +74,7 @@ public class JSONParser{
 func parseHotels( context:NSManagedObjectContext)
 {
     //waar staan de gegevens
-    let url = URL(string: "//web10.weopendata.com/measurements/logies")
+    let url = URL(string: "http://web10.weopendata.com/measurements/logies")
     //exceptions mogelijk bv. geen internet
     do {
         //data binnentrekken van url en in array opslaan
@@ -92,8 +92,8 @@ func parseHotels( context:NSManagedObjectContext)
             
             //strings omzetten waar nodig
            
-            hotel.tel =  jsonObject.value(forKey: "tel") as? String
-            hotel.naam = jsonObject.value(forKey: "naam") as? String
+            hotel.tel =  jsonObject.value(forKey: "TEL") as? String
+            hotel.naam = jsonObject.value(forKey: "NAAM") as? String
             //rest keys nog niet geparset
         }
     } catch  {
@@ -122,8 +122,8 @@ func parseInfo( context:NSManagedObjectContext)
            
             //strings omzetten waar nodig
           
-            infoKantoren.adres_straat =  jsonObject.value(forKey: "adres_straat") as? String
-            infoKantoren.gsm = jsonObject.value(forKey: "gsm") as? String
+            infoKantoren.adres_straat =  jsonObject.value(forKey: "ADRES_STRAAT") as? String
+            infoKantoren.gsm = jsonObject.value(forKey: "GSM") as? String
             //rest keys nog niet geparset
         }
     } catch  {
@@ -154,8 +154,8 @@ func parseParking( context:NSManagedObjectContext)
             
             //strings omzetten waar nodig
           
-            parking.id_westkans = jsonObject.value(forKey: "id_westkans") as? String
-            parking.gemeente = jsonObject.value(forKey: "gemeente") as? String
+            parking.id_westkans = jsonObject.value(forKey: "ID_WESTKANS") as? String
+            parking.gemeente = jsonObject.value(forKey: "GEMEENTE") as? String
             //rest keys nog niet geparset
         }
     } catch  {
@@ -186,8 +186,8 @@ func parseToiletten( context:NSManagedObjectContext)
             
             //strings omzetten waar nodig
             
-            toilet.regio =  jsonObject.value(forKey: "regio") as? String
-            toilet.naam = jsonObject.value(forKey: "naam") as? String
+            toilet.regio =  jsonObject.value(forKey: "REGIO") as? String
+            toilet.naam = jsonObject.value(forKey: "NAAM") as? String
             //rest keys nog niet geparset
         }
     } catch  {
@@ -216,8 +216,8 @@ func parsePOIs( context:NSManagedObjectContext)
             
             //strings omzetten waar nodig
           
-            interessanteLocatie.openingsuren = jsonObject.value(forKey: "openingsuren") as? String
-            interessanteLocatie.mail = jsonObject.value(forKey: "mail") as? String
+            interessanteLocatie.openingsuren = jsonObject.value(forKey: "OPENINGSUREN") as? String
+            interessanteLocatie.mail = jsonObject.value(forKey: "MAIL") as? String
             //rest keys nog niet geparset
         }
     } catch  {
@@ -247,8 +247,8 @@ func parseDijken( context:NSManagedObjectContext)
             
             //strings omzetten waar nodig
            
-            dijken.adres_locatie =  jsonObject.value(forKey: "adres_locatie") as? String
-            dijken.type = jsonObject.value(forKey: "type") as? String
+            dijken.adres_locatie =  jsonObject.value(forKey: "ADRES_LOCATIE") as? String
+            dijken.type = jsonObject.value(forKey: "TYPE") as? String
             //rest keys nog niet geparset
         }
     } catch  {
