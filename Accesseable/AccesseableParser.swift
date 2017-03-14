@@ -37,7 +37,7 @@ public class JSONParser{
                 //rest keys nog niet geparset
             }
         } catch  {
-            print("Fout bij binnenhalen van de data")
+            print("Fout bij binnenhalen van de tram data")
         
         }}
         func parseRestaurants( context:NSManagedObjectContext)
@@ -61,13 +61,13 @@ public class JSONParser{
                     
                     //strings omzetten waar nodig
                    
-                    restaurant.adres_straat =  jsonObject.value(forKey: "ADRES_STRAAT") as! String?
+                    restaurant.adres_straat =  jsonObject.value(forKey: "ADRES_STRAAT") as? String
                     restaurant.gemeente = jsonObject.value(forKey: "GEMEENTE") as? String
                     restaurant.naam = jsonObject.value(forKey: "NAAM") as? String
                     //rest keys nog niet geparset
                 }
             } catch  {
-                print("Fout bij binnenhalen van de data")
+                print("Fout bij binnenhalen van de restaurants data")
             }
 }
 
@@ -97,7 +97,7 @@ func parseHotels( context:NSManagedObjectContext)
             //rest keys nog niet geparset
         }
     } catch  {
-        print("Fout bij binnenhalen van de data")
+        print("Fout bij binnenhalen van de hotels data")
     }
 }
 func parseInfo( context:NSManagedObjectContext)
@@ -124,10 +124,11 @@ func parseInfo( context:NSManagedObjectContext)
           
             infoKantoren.adres_straat =  jsonObject.value(forKey: "ADRES_STRAAT") as? String
             infoKantoren.gsm = jsonObject.value(forKey: "GSM") as? String
+            infoKantoren.naam = jsonObject.value(forKey: "NAAM") as? String
             //rest keys nog niet geparset
         }
     } catch  {
-        print("Fout bij binnenhalen van de data")
+        print("Fout bij binnenhalen van de info data")
     }
 }
 
@@ -156,10 +157,11 @@ func parseParking( context:NSManagedObjectContext)
           
             parking.id_westkans = jsonObject.value(forKey: "ID_WESTKANS") as? String
             parking.gemeente = jsonObject.value(forKey: "GEMEENTE") as? String
+            parking.naam = jsonObject.value(forKey: "NAAM") as? String
             //rest keys nog niet geparset
         }
     } catch  {
-        print("Fout bij binnenhalen van de data")
+        print("Fout bij binnenhalen van de parking data")
     }
 }
 func parseToiletten( context:NSManagedObjectContext)
@@ -191,7 +193,7 @@ func parseToiletten( context:NSManagedObjectContext)
             //rest keys nog niet geparset
         }
     } catch  {
-        print("Fout bij binnenhalen van de data")
+        print("Fout bij binnenhalen van de wc data")
     }
 }
 func parsePOIs( context:NSManagedObjectContext)
@@ -218,10 +220,11 @@ func parsePOIs( context:NSManagedObjectContext)
           
             interessanteLocatie.openingsuren = jsonObject.value(forKey: "OPENINGSUREN") as? String
             interessanteLocatie.mail = jsonObject.value(forKey: "MAIL") as? String
+            interessanteLocatie.naam = jsonObject.value(forKey: "NAAM") as? String
             //rest keys nog niet geparset
         }
     } catch  {
-        print("Fout bij binnenhalen van de data")
+        print("Fout bij binnenhalen van de poi data")
     }
 }
 func parseDijken( context:NSManagedObjectContext)
@@ -249,10 +252,11 @@ func parseDijken( context:NSManagedObjectContext)
            
             dijken.adres_locatie =  jsonObject.value(forKey: "ADRES_LOCATIE") as? String
             dijken.type = jsonObject.value(forKey: "TYPE") as? String
+            dijken.naam = jsonObject.value(forKey: "NAAM") as? String
             //rest keys nog niet geparset
         }
     } catch  {
-        print("Fout bij binnenhalen van de data")
+        print("Fout bij binnenhalen van de dijken data")
     }
     }
  }
