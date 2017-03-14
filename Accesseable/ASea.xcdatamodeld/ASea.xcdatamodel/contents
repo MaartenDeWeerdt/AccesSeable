@@ -462,9 +462,9 @@
         <attribute name="y" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Tram" representedClassName="Tram" syncable="YES" codeGenerationType="class">
-        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lat" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="location_type" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="lon" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lon" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="naam" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="parent_station" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stop_code" optional="YES" attributeType="String" syncable="YES"/>
@@ -472,7 +472,7 @@
         <attribute name="stop_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stop_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="weelchair_boarding" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="zone_id" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="zone_id" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="VPP" representedClassName="VPP" syncable="YES" codeGenerationType="class">
         <attribute name="adres_nr" optional="YES" attributeType="String" syncable="YES"/>
