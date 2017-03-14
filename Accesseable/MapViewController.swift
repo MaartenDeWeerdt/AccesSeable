@@ -92,9 +92,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         {
             let annotation = MKPointAnnotation.init()
             
-            let latStr = Double(Tram.lat!)
-            let lonStr = Double(Tram.lon!)
-            annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
+            let latStr = Double(Tram.lat)
+           let lonStr = Double(Tram.lon)
+            annotation.coordinate = CLLocationCoordinate2DMake(latStr, lonStr)
             
             mapview.addAnnotation(annotation)
             
