@@ -24,7 +24,7 @@ class detailViewController: UIViewController {
         
         do {
             //adress to image
-            let url = URL.init(string: (objectPassed?.url_picture_extra1)!)
+            let url = URL.init(string:(objectPassed?.regio)!)
             //convert url tot data
             let data = try Data.init(contentsOf: url!)
             //convert data to image
@@ -35,7 +35,8 @@ class detailViewController: UIViewController {
         } catch  {
             
         }
-        
+      
+    
         
         
         
