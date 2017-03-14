@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41CB60E31E72A70100575A32 /* ASea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41CB60E11E72A70100575A32 /* ASea.xcdatamodeld */; };
+		41F44AD31E77FA5800AA58E3 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F44AD21E77FA5800AA58E3 /* JSONParser.swift */; };
 		51218AF41E77DD6300D4F2F5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51218AF31E77DD6300D4F2F5 /* TableViewCell.swift */; };
 		51218AF61E77DDEE00D4F2F5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51218AF51E77DDEE00D4F2F5 /* CollectionViewCell.swift */; };
 		51218AF81E77E0E100D4F2F5 /* TableViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51218AF71E77E0E100D4F2F5 /* TableViewRow.swift */; };
@@ -91,6 +92,7 @@
 /* Begin PBXFileReference section */
 		419280F51E7689BF0010D833 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		41CB60E21E72A70100575A32 /* ASea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASea.xcdatamodel; sourceTree = "<group>"; };
+		41F44AD21E77FA5800AA58E3 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		51218AF31E77DD6300D4F2F5 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		51218AF51E77DDEE00D4F2F5 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		51218AF71E77E0E100D4F2F5 /* TableViewRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewRow.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				51218AF31E77DD6300D4F2F5 /* TableViewCell.swift */,
 				51218AF51E77DDEE00D4F2F5 /* CollectionViewCell.swift */,
 				51F403F21E72A57600B11946 /* Main.storyboard */,
+				41F44AD21E77FA5800AA58E3 /* JSONParser.swift */,
 				51F403F81E72A57600B11946 /* Assets.xcassets */,
 				51F403FA1E72A57600B11946 /* LaunchScreen.storyboard */,
 				51F403FD1E72A57600B11946 /* Info.plist */,
@@ -454,6 +457,7 @@
 				51218AF61E77DDEE00D4F2F5 /* CollectionViewCell.swift in Sources */,
 				512A43641E768A1B00A6FC4F /* AccesseableParser.swift in Sources */,
 				51F403EF1E72A57600B11946 /* AppDelegate.swift in Sources */,
+				41F44AD31E77FA5800AA58E3 /* JSONParser.swift in Sources */,
 				41CB60E31E72A70100575A32 /* ASea.xcdatamodeld in Sources */,
 				51C622381E77F20C0076803E /* Restaurants.swift in Sources */,
 				51218AF41E77DD6300D4F2F5 /* TableViewCell.swift in Sources */,
