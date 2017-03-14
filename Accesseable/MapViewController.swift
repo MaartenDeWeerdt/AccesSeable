@@ -8,30 +8,30 @@
 
 import UIKit
 import MapKit
+import CoreData
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     
     
+    @IBOutlet weak var tfLon: UITextField!
+    @IBOutlet weak var tfLat: UITextField!
     @IBOutlet weak var mapview: MKMapView!
-    @IBOutlet weak var tvMap: UITextView!
     
-    
+    var items:[NSManagedObject]?
+
     var locationManager = CLLocationManager()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        
-        tvMap.text = "\(DAO.sharedDAO.getAllRestaurants())"
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+        createAnnotation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,5 +60,20 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     
+    func createAnnotation()
+    {
+        for item in DAO.sharedDAO.getAllRestaurants()!
+        {
+            let annotation = MKPointAnnotation.init()
+            
+            let latStr = Double(item.lat!)
+            let lonStr = Double(item.lon!)
+            annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
+            
+            mapview.addAnnotation(annotation)
+        
+        }
+        
+    }
 
 }

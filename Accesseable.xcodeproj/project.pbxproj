@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		41CB60E31E72A70100575A32 /* ASea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41CB60E11E72A70100575A32 /* ASea.xcdatamodeld */; };
+		41F44AD71E78022600AA58E3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F44AD61E78022600AA58E3 /* MapViewController.swift */; };
+		41F44AD91E78180500AA58E3 /* MapPOIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F44AD81E78180500AA58E3 /* MapPOIs.swift */; };
 		51218AF41E77DD6300D4F2F5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51218AF31E77DD6300D4F2F5 /* TableViewCell.swift */; };
 		51218AF61E77DDEE00D4F2F5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51218AF51E77DDEE00D4F2F5 /* CollectionViewCell.swift */; };
 		51218AF81E77E0E100D4F2F5 /* TableViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51218AF71E77E0E100D4F2F5 /* TableViewRow.swift */; };
@@ -80,7 +82,7 @@
 		512A43641E768A1B00A6FC4F /* AccesseableParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512A43631E768A1B00A6FC4F /* AccesseableParser.swift */; };
 		51C622351E77EA350076803E /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419280F51E7689BF0010D833 /* DAO.swift */; };
 		51C622391E77F74B0076803E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51F403FD1E72A57600B11946 /* Info.plist */; };
-		51C6223B1E7801A50076803E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C6223A1E7801A50076803E /* MapViewController.swift */; };
+		51C6223B1E7801A50076803E /* (null) in Sources */ = {isa = PBXBuildFile; };
 		51F403EF1E72A57600B11946 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F403EE1E72A57600B11946 /* AppDelegate.swift */; };
 		51F403F11E72A57600B11946 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F403F01E72A57600B11946 /* ViewController.swift */; };
 		51F403F41E72A57600B11946 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F403F21E72A57600B11946 /* Main.storyboard */; };
@@ -91,6 +93,8 @@
 /* Begin PBXFileReference section */
 		419280F51E7689BF0010D833 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		41CB60E21E72A70100575A32 /* ASea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASea.xcdatamodel; sourceTree = "<group>"; };
+		41F44AD61E78022600AA58E3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		41F44AD81E78180500AA58E3 /* MapPOIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPOIs.swift; sourceTree = "<group>"; };
 		51218AF31E77DD6300D4F2F5 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		51218AF51E77DDEE00D4F2F5 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		51218AF71E77E0E100D4F2F5 /* TableViewRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewRow.swift; sourceTree = "<group>"; };
@@ -263,13 +267,6 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
-		51C622361E77F1BB0076803E /* Categorieën */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Categorieën";
-			sourceTree = "<group>";
-		};
 		51F403E21E72A57500B11946 = {
 			isa = PBXGroup;
 			children = (
@@ -294,14 +291,15 @@
 				51F403EE1E72A57600B11946 /* AppDelegate.swift */,
 				51F403F01E72A57600B11946 /* ViewController.swift */,
 				51218AF71E77E0E100D4F2F5 /* TableViewRow.swift */,
-				51C6223A1E7801A50076803E /* MapViewController.swift */,
 				51218AF31E77DD6300D4F2F5 /* TableViewCell.swift */,
 				51218AF51E77DDEE00D4F2F5 /* CollectionViewCell.swift */,
+				41F44AD61E78022600AA58E3 /* MapViewController.swift */,
 				51F403F21E72A57600B11946 /* Main.storyboard */,
 				51F403F81E72A57600B11946 /* Assets.xcassets */,
 				51F403FA1E72A57600B11946 /* LaunchScreen.storyboard */,
 				51F403FD1E72A57600B11946 /* Info.plist */,
 				41CB60E11E72A70100575A32 /* ASea.xcdatamodeld */,
+				41F44AD81E78180500AA58E3 /* MapPOIs.swift */,
 			);
 			path = Accesseable;
 			sourceTree = "<group>";
@@ -449,12 +447,14 @@
 				51218AF81E77E0E100D4F2F5 /* TableViewRow.swift in Sources */,
 				51F403F11E72A57600B11946 /* ViewController.swift in Sources */,
 				51C622351E77EA350076803E /* DAO.swift in Sources */,
-				51C6223B1E7801A50076803E /* MapViewController.swift in Sources */,
+				41F44AD71E78022600AA58E3 /* MapViewController.swift in Sources */,
+				51C6223B1E7801A50076803E /* (null) in Sources */,
 				51218AF61E77DDEE00D4F2F5 /* CollectionViewCell.swift in Sources */,
 				512A43641E768A1B00A6FC4F /* AccesseableParser.swift in Sources */,
 				51F403EF1E72A57600B11946 /* AppDelegate.swift in Sources */,
 				41CB60E31E72A70100575A32 /* ASea.xcdatamodeld in Sources */,
 				51218AF41E77DD6300D4F2F5 /* TableViewCell.swift in Sources */,
+				41F44AD91E78180500AA58E3 /* MapPOIs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

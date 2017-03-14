@@ -29,19 +29,43 @@
                                     <constraint firstAttribute="height" constant="419" id="xpo-t3-eLr"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="delegate" destination="JtG-Zr-F3A" id="t5E-zy-ZNc"/>
+                                    <outlet property="delegate" destination="JtG-Zr-F3A" id="Und-MN-fnC"/>
                                 </connections>
                             </mapView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UHe-fN-Z62">
-                                <rect key="frame" x="16" y="447" width="343" height="163"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmU-YU-03Y">
+                                <rect key="frame" x="16" y="472" width="51" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.97398143960000005" blue="0.72606103609999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUC-6e-G5a">
+                                <rect key="frame" x="16" y="532" width="29" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l2G-2u-hPD">
+                                <rect key="frame" x="75" y="467" width="244" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="JtG-Zr-F3A" id="Fln-om-io9"/>
+                                    <outlet property="delegate" destination="JtG-Zr-F3A" id="znd-9c-vgD"/>
                                 </connections>
-                            </textView>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zTz-2f-5Wl">
+                                <rect key="frame" x="75" y="527" width="244" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JtG-Zr-F3A" id="jeO-Ap-uBw"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -53,7 +77,8 @@
                     <tabBarItem key="tabBarItem" title="Kaart" image="myMarker.png" selectedImage="myMarker.png" id="NDZ-dj-I5R"/>
                     <connections>
                         <outlet property="mapview" destination="mXP-Tw-TAL" id="k5r-b8-OHS"/>
-                        <outlet property="tvMap" destination="UHe-fN-Z62" id="JF6-tr-Zyz"/>
+                        <outlet property="tfLat" destination="l2G-2u-hPD" id="ejs-f3-9pA"/>
+                        <outlet property="tfLon" destination="zTz-2f-5Wl" id="UZS-ee-w4C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gex-f9-ALT" userLabel="First Responder" sceneMemberID="firstResponder"/>
