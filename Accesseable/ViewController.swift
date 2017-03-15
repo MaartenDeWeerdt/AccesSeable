@@ -54,8 +54,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
         cell.backgroundColor = UIColor.blue
         //let object:NSObject = (items[indexPath.row])
-        //cell.lblNaam.text = object.value(forKey: "naam") as! String
-        print("\(DAO.sharedDAO.getAllRestaurants())")
+        cell.lblNaam.text = rows[indexPath.section].items[indexPath.row].value(forKey: "naam") as! String
         
         return cell
     }
