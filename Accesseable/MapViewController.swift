@@ -116,7 +116,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             let lonStr = Double(Reca.lon!)
             annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
             annotation.title = Reca.naam
-            annotation.pinRecaImageName = "Restaurant"
+            annotation.pinRecaImageName = "RestaurantS"
             
             mapview.addAnnotation(annotation)
         

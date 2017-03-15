@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41B418021E792D8B0048D49B /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B418011E792D8B0048D49B /* CustomPointAnnotation.swift */; };
+		41B418041E7966850048D49B /* RestaurantS.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B418031E7966850048D49B /* RestaurantS.png */; };
 		41CB60E31E72A70100575A32 /* ASea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41CB60E11E72A70100575A32 /* ASea.xcdatamodeld */; };
 		41F44AD71E78022600AA58E3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F44AD61E78022600AA58E3 /* MapViewController.swift */; };
 		41F44AD91E78180500AA58E3 /* MapPOIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F44AD81E78180500AA58E3 /* MapPOIs.swift */; };
@@ -94,6 +95,7 @@
 /* Begin PBXFileReference section */
 		419280F51E7689BF0010D833 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		41B418011E792D8B0048D49B /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPointAnnotation.swift; sourceTree = "<group>"; };
+		41B418031E7966850048D49B /* RestaurantS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RestaurantS.png; sourceTree = "<group>"; };
 		41CB60E21E72A70100575A32 /* ASea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASea.xcdatamodel; sourceTree = "<group>"; };
 		41F44AD61E78022600AA58E3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		41F44AD81E78180500AA58E3 /* MapPOIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPOIs.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				512A43041E72AD3900A6FC4F /* recent_Kleur.png */,
 				512A43051E72AD3900A6FC4F /* recent.png */,
 				512A43061E72AD3900A6FC4F /* RecenteLocatie.png */,
+				41B418031E7966850048D49B /* RestaurantS.png */,
 				512A43081E72AD3900A6FC4F /* Sanitair.png */,
 				512A43091E72AD3900A6FC4F /* search_transp_white.png */,
 				512A430A1E72AD3900A6FC4F /* search.png */,
@@ -387,6 +390,7 @@
 				512A43421E72AD3A00A6FC4F /* plus.png in Resources */,
 				512A43301E72AD3A00A6FC4F /* inDeBuurt.png in Resources */,
 				512A43581E72AD3A00A6FC4F /* volgend.png in Resources */,
+				41B418041E7966850048D49B /* RestaurantS.png in Resources */,
 				512A43251E72AD3A00A6FC4F /* car.png in Resources */,
 				512A435C1E72AD3A00A6FC4F /* zeesterKleur.png in Resources */,
 				512A43221E72AD3900A6FC4F /* Back.png in Resources */,
