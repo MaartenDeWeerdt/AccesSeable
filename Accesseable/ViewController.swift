@@ -45,9 +45,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         else
         {
-            
             return rows[selectedCat].items.count
-
         }
         
     }
@@ -60,7 +58,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         {
             return 1
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -73,20 +70,26 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         else
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
-            
-            cell.backgroundColor = UIColor.blue
-            //let object:NSObject = (items[indexPath.row])
-            cell.lblNaam.text = rows[indexPath.section].items[indexPath.row].value(forKey: "naam") as? String
-            cell.lblAdres.text = rows[indexPath.section].items[indexPath.row].value(forKey: "adres_straat") as? String
-            cell.lblGemeente.text = rows[indexPath.section].items[indexPath.row].value(forKey: "gemeente") as? String
+            switch selectedCat {
+            case 0:
+                cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
+                cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
+                cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
+            case 1:
+                cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
+                cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
+                cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
+            default:
+                print("deze collectie bestaat niet")
+            }
             return cell
+            
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView.tag == 1{
-            selectedCat = indexPath.section
+            selectedCat = indexPath.row
         
             CategorieCollection.reloadData()
         }

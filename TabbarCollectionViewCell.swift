@@ -15,7 +15,11 @@ class TabbarCollectionViewCell: UICollectionViewCell {
     override var isSelected: Bool{
         didSet{
             if isSelected{
-                self.backgroundColor = UIColor.yellow
+                self.alpha = 0.5
+            }
+            else
+            {
+                self.alpha = 1
             }
         }
     }
