@@ -168,7 +168,7 @@ func parseParking( context:NSManagedObjectContext)
             //strings omzetten waar nodig
           
             parking.naam = jsonObject.value(forKey: "NAAM") as? String
-            parking.deelgemeente = jsonObject.value(forKey: "DEELGEMEENTE") as? String
+            //parking.deelgemeente = jsonObject.value(forKey: "DEELGEMEENTE") as? String
             parking.adres_straat = jsonObject.value(forKey: "ADRES_STRAAT") as? String
             parking.lat = jsonObject.value(forKey: "LAT") as? String
             parking.lon = jsonObject.value(forKey: "LON") as? String
