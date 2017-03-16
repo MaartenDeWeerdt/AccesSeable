@@ -11,19 +11,20 @@ import MapKit
 import CoreData
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
-
+    
     
     @IBOutlet weak var mapview: MKMapView!
     
     // variables
     var items:[NSManagedObject]?
-
+    
     var locationManager = CLLocationManager()
     var pointAnnotation:CustomPointAnnotation!
     var pinAnnotationView:MKPinAnnotationView!
     
     var checked = [Bool]()
     
+    var category = ["Restaurants", "Hotels", "Infokantoren", "Parkings", "Toiletten", "Tramhaltes", "Interessante locaties", "Dijken"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,20 +39,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         mapview.delegate = self
         mapview.mapType = MKMapType.standard
+        mapview.showsUserLocation = true
         
-        //Annotations laten verschijnen
-        createRestaurantsAnnotation()
-        createTramsAnnotation()
-        createInfoAnnotation()
-        createParkingAnnotation()
-        createToilettenAnnotation()
-        createParkingAnnotation()
-        createToilettenAnnotation()
-        createPOIsAnnotation()
-        createDijkenAnnotation()
+        
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -71,13 +64,20 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
-    
-    
-    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 500, 500)
-        mapview.region = region
+        let userLocation:CLLocation = locations[0] as CLLocation
+        locationManager.stopUpdatingLocation()
+        
+        let location = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        
+        let span = MKCoordinateSpanMake(0.5, 0.5)
+        
+        let region = MKCoordinateRegion (center:  location,span: span)
+        
+        mapview.setRegion(region, animated: true)
     }
+    
     
     // Pokemon
     func locationManager(manager: CLLocationManager, didFailWithError error: Error) {
@@ -102,7 +102,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         let customPointAnnotation = annotation as! CustomPointAnnotation
         annotationView?.image = UIImage(named: customPointAnnotation.pinImageName)
-
+        
         return annotationView
         
         
@@ -122,9 +122,26 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             
             
             mapview.addAnnotation(annotation)
-        
+            
         }
         
+    }
+    
+    func createHotelsAnnotation()
+    {
+        for Logies in DAO.sharedDAO.getAllHotels()
+        {
+            let annotation = CustomPointAnnotation()
+            
+            let latStr = Double(Logies.lat!)
+            let lonStr = Double(Logies.lon!)
+            annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
+            annotation.title = Logies.naam
+            annotation.pinImageName = "HomeS"
+            
+            
+            mapview.addAnnotation(annotation)
+        }
     }
     
     func createTramsAnnotation()
@@ -241,26 +258,60 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return category.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "mapCell")!
         
+        cell.textLabel?.text = category[indexPath.row]
         
         
         return cell
     }
     
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        switch indexPath.row {
+        case 0:
+            createRestaurantsAnnotation()
+            
+        case 1:
+            createHotelsAnnotation()
+            
+        case 2:
+            createInfoAnnotation()
+            
+        case 3:
+            createParkingAnnotation()
+            
+        case 4:
+            createToilettenAnnotation()
+            
+        case 5:
+            createTramsAnnotation()
+            
+        case 6:
+            createPOIsAnnotation()
+            
+        case 7:
+            createDijkenAnnotation()
+            
+        default:
+            print("Pin bestaat niet!")
+        }
+    }
     
-    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
+        mapview.removeAnnotations(mapview.annotations)
+    }
     
     
 }
 
-    
-    
-    
+
+
 
