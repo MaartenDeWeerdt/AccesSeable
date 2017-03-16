@@ -10,23 +10,22 @@ import UIKit
 import CoreData
 
 class DetailViewController: UIViewController {
+      var objectPassed:NSManagedObject?
+    
     
     @IBOutlet weak var scrollview: UIScrollView!
-    var objectPassed:NSManagedObject?
     @IBOutlet weak var imgImage: UIImageView!
     @IBOutlet weak var lblNaam: UILabel!
-    @IBOutlet weak var lbladress: UITextField!
-    @IBOutlet weak var lblregio: UITextField!
-    @IBOutlet weak var lblfax: UITextField!
-    @IBOutlet weak var lblgsm: UITextField!
-    @IBOutlet weak var lbltel: UITextField!
-    
+    @IBOutlet weak var lblMail: UILabel!
+      @IBOutlet weak var lblAdress: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scrollview.contentSize = CGSize.init(width: 375, height: 3000)
         
         lblNaam.text = objectPassed?.value(forKey: "naam") as? String
+        lblAdress.text = objectPassed?.value(forKey: "adres_straat") as! String?
+        lblMail.text = objectPassed?.value(forKey: "mail") as! String?
         /*
          lbladress.text = objectPassed?.value(forKey: "ADRES_STRAAT") as? String
          lbltel.text = objectPassed?.value(forKey: "TEL") as! String?
