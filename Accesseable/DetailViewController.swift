@@ -35,7 +35,7 @@ class DetailViewController: UIViewController {
          lblregio.text = objectPassed?.value(forKey: "REGIO") as! String?
          */
         
-        if(objectPassed?.value(forKey: "url_picture_main") != nil)
+        if(objectPassed?.value(forKey: "url_picture_main") as! String != "")
         {
             do {
                 //adress to image

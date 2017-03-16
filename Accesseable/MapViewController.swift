@@ -39,8 +39,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         mapview.delegate = self
         mapview.mapType = MKMapType.standard
+        mapview.showsUserLocation = true
         
-        //Annotations laten verschijnen
         
         
     }
@@ -64,13 +64,20 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
-    
-    
-    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 500, 500)
-        mapview.region = region
+        let userLocation:CLLocation = locations[0] as CLLocation
+        locationManager.stopUpdatingLocation()
+        
+        let location = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        
+        let span = MKCoordinateSpanMake(0.5, 0.5)
+        
+        let region = MKCoordinateRegion (center:  location,span: span)
+        
+        mapview.setRegion(region, animated: true)
     }
+    
     
     // Pokemon
     func locationManager(manager: CLLocationManager, didFailWithError error: Error) {
