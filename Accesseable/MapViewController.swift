@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreData
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
 
     
     @IBOutlet weak var mapview: MKMapView!
@@ -21,6 +21,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var locationManager = CLLocationManager()
     var pointAnnotation:CustomPointAnnotation!
     var pinAnnotationView:MKPinAnnotationView!
+    
+    var checked = [Bool]()
     
     
     override func viewDidLoad() {
@@ -39,14 +41,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         //Annotations laten verschijnen
         createRestaurantsAnnotation()
-        //createTramsAnnotation()
-        //createInfoAnnotation()
-        //createParkingAnnotation()
-        //createToilettenAnnotation()
-        //createParkingAnnotation()
-        //createToilettenAnnotation()
-        //createPOIsAnnotation()
-        //createDijkenAnnotation()
+        createTramsAnnotation()
+        createInfoAnnotation()
+        createParkingAnnotation()
+        createToilettenAnnotation()
+        createParkingAnnotation()
+        createToilettenAnnotation()
+        createPOIsAnnotation()
+        createDijkenAnnotation()
         
     }
 
@@ -73,7 +75,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         
-        let region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 1000, 1000)
+        let region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 500, 500)
         mapview.region = region
     }
     
@@ -99,8 +101,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
         
         let customPointAnnotation = annotation as! CustomPointAnnotation
-        annotationView?.image = UIImage(named: customPointAnnotation.pinRecaImageName)
-        
+        annotationView?.image = UIImage(named: customPointAnnotation.pinImageName)
+
         return annotationView
         
         
@@ -116,7 +118,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             let lonStr = Double(Reca.lon!)
             annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
             annotation.title = Reca.naam
-            annotation.pinRecaImageName = "RestaurantS"
+            annotation.pinImageName = "RestaurantS"
+            
             
             mapview.addAnnotation(annotation)
         
@@ -128,12 +131,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     {
         for Tram in DAO.sharedDAO.getAllTrams()!
         {
-            let annotation = MKPointAnnotation.init()
+            let annotation = CustomPointAnnotation()
             
             let latStr = Double(Tram.lat!)
             let lonStr = Double(Tram.lon!)
             annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
             annotation.title = Tram.naam
+            annotation.pinImageName = "tramS"
             
             mapview.addAnnotation(annotation)
             
@@ -145,12 +149,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     {
         for Info in DAO.sharedDAO.getAllInfo()
         {
-            let annotation = MKPointAnnotation.init()
+            let annotation = CustomPointAnnotation()
             
             let latStr = Double(Info.lat!)
             let lonStr = Double(Info.lon!)
             annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
             annotation.title = Info.naam
+            annotation.pinImageName = "InfoS"
             
             mapview.addAnnotation(annotation)
             
@@ -162,12 +167,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     {
         for Parking in DAO.sharedDAO.getAllParkings()
         {
-            let annotation = MKPointAnnotation.init()
+            let annotation = CustomPointAnnotation()
             
             let latStr = Double(Parking.lat!)
             let lonStr = Double(Parking.lon!)
             annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
             annotation.title = Parking.naam
+            annotation.pinImageName = "parkingS"
             
             mapview.addAnnotation(annotation)
             
@@ -179,12 +185,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     {
         for Toilet in DAO.sharedDAO.getAllSanitair()
         {
-            let annotation = MKPointAnnotation.init()
+            let annotation = CustomPointAnnotation()
             
             let latStr = Double(Toilet.lat!)
             let lonStr = Double(Toilet.lon!)
             annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
             annotation.title = Toilet.naam
+            annotation.pinImageName = "SanitairS"
             
             mapview.addAnnotation(annotation)
             
@@ -196,12 +203,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     {
         for POIs in DAO.sharedDAO.getAllPOIs()!
         {
-            let annotation = MKPointAnnotation.init()
+            let annotation = CustomPointAnnotation()
             
             let latStr = Double(POIs.lat!)
             let lonStr = Double(POIs.lon!)
             annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
             annotation.title = POIs.naam
+            annotation.pinImageName = "POIS"
             
             mapview.addAnnotation(annotation)
             
@@ -213,12 +221,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     {
         for Dijk in DAO.sharedDAO.getAllDijken()!
         {
-            let annotation = MKPointAnnotation.init()
+            let annotation = CustomPointAnnotation()
             
             let latStr = Double(Dijk.lat!)
             let lonStr = Double(Dijk.lon!)
             annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
             annotation.title = Dijk.naam
+            annotation.pinImageName = "ZZZS"
             
             mapview.addAnnotation(annotation)
             
@@ -227,5 +236,30 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     
-
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 7
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "mapCell")!
+        
+        
+        
+        return cell
+    }
+    
+    
+    
+    
+    
 }
+
+    
+    
+    
+

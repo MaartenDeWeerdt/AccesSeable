@@ -11,12 +11,6 @@ import MapKit
 
 class CustomPointAnnotation: MKPointAnnotation {
     
-    var pinTramImageName:String!
-    var pinRecaImageName:String!
-    var pinInfoImageName:String!
-    var pinParkingImageName:String!
-    var pinToiletImageName:String!
-    var pinPOIsImageName:String!
-    var pinDijkImageName:String!
+    var pinImageName:String!
     
 }
