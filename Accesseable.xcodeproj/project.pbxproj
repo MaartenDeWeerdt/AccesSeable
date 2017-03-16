@@ -321,6 +321,7 @@
 				5103D6CB1E7A881C001AC218 /* TabbarCollectionViewCell.swift */,
 				51218AF71E77E0E100D4F2F5 /* TableViewRow.swift */,
 				51218AF31E77DD6300D4F2F5 /* TableViewCell.swift */,
+				516390611E7ADCC500B29AB8 /* DetailViewController.swift */,
 				51218AF51E77DDEE00D4F2F5 /* CollectionViewCell.swift */,
 				41F44AD61E78022600AA58E3 /* MapViewController.swift */,
 				41B418011E792D8B0048D49B /* CustomPointAnnotation.swift */,
@@ -329,7 +330,6 @@
 				51F403FA1E72A57600B11946 /* LaunchScreen.storyboard */,
 				51F403FD1E72A57600B11946 /* Info.plist */,
 				41CB60E11E72A70100575A32 /* ASea.xcdatamodeld */,
-				516390611E7ADCC500B29AB8 /* DetailViewController.swift */,
 			);
 			path = Accesseable;
 			sourceTree = "<group>";

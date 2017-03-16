@@ -18,8 +18,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var CategorieCollection: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         
         rows.append(TableViewRow.init(title: "Restaurants", items: DAO.sharedDAO.getAllRestaurants()!))
         rows.append(TableViewRow.init(title: "Hotels", items: DAO.sharedDAO.getAllHotels()))
@@ -76,7 +79,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
                 cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
                 
-                
+                if(rows[selectedCat].items[indexPath.row].value(forKey: "url_picture_main") as? String != "")
+                {
+                    do {
+                        //adress to image
+                        let url = URL.init(string: (rows[selectedCat].items[indexPath.row].value(forKey: "url_picture_main") as? String)!)
+                        //convert url tot data
+                        let data = try Data.init(contentsOf: url!)
+                        //convert data to image
+                        cell.imgFoto.image = UIImage.init(data: data)
+                    } catch  {
+                        print("foto niet gevonden")
+                    }
+                }
+                else
+                {
+                    cell.imgFoto.image = #imageLiteral(resourceName: "Restaurant.png")
+                }
+
                 
                 
             case 1:
@@ -84,6 +104,25 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
                 cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
                 cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
+                
+                if(rows[selectedCat].items[indexPath.row].value(forKey: "url_picture_main") as? String != "")
+                {
+                    do {
+                        //adress to image
+                        let url = URL.init(string: (rows[selectedCat].items[indexPath.row].value(forKey: "url_picture_main") as? String)!)
+                        //convert url tot data
+                        let data = try Data.init(contentsOf: url!)
+                        //convert data to image
+                        cell.imgFoto.image = UIImage.init(data: data)
+                    } catch  {
+                        print("foto niet gevonden")
+                    }
+                }
+                else
+                {
+                    cell.imgFoto.image = #imageLiteral(resourceName: "home.png")
+                }
+
                 
             case 2:
                 //infokantoren
@@ -95,16 +134,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
                 cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
                 cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
+                
+                
             case 4:
-                //toilette
+                //toiletten
                 cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
                 cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
                 cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
             case 5:
                 //tramhaltes
                 cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
-                //cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
-                //cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
             case 6:
                 //interessante locaties
                 cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
@@ -140,6 +179,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let index:IndexPath = CategorieCollection.indexPath(for: cell)!
         
         detailViewController.objectPassed = rows[selectedCat].items[index.row]
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
     }
     
 }

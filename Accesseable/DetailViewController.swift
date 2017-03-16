@@ -21,9 +21,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lblgsm: UITextField!
     @IBOutlet weak var lbltel: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         scrollview.contentSize = CGSize.init(width: 375, height: 3000)
         
         lblNaam.text = objectPassed?.value(forKey: "naam") as? String
