@@ -73,7 +73,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     // Pokemon
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    func locationManager(manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
     }
     // Pokemon
@@ -144,7 +144,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             let annotation = CustomPointAnnotation()
             
             let latStr = Double(Tram.lat!)
-            let lonStr = Double(Tram.lon!)
+           let lonStr = Double(Tram.lon!)
             annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
             annotation.title = Tram.naam
             annotation.pinImageName = "tramS"
