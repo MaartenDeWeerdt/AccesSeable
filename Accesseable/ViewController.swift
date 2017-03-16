@@ -72,10 +72,42 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
             switch selectedCat {
             case 0:
+                //restaurants
                 cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
                 cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
                 cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
             case 1:
+                //hotels
+                cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
+                cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
+                cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
+            case 2:
+                //infokantoren
+                cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
+                cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
+                cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
+            case 3:
+                //parkings
+                cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
+                cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
+                cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
+            case 4:
+                //toilette
+                cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
+                cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
+                cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
+            case 5:
+                //tramhaltes
+                cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
+                //cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
+                //cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
+            case 6:
+                //interessante locaties
+                cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
+                cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
+                cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
+            case 7:
+                //dijken
                 cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
                 cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
                 cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
