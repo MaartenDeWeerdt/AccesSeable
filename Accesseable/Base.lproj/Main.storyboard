@@ -258,8 +258,11 @@
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" text="Test" translatesAutoresizingMaskIntoConstraints="NO" id="8eX-p0-xMR">
                                         <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="rKN-gT-G3z"/>
+                                        </connections>
                                     </searchBar>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="08h-Y6-W5a">
+                                    <collectionView clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="08h-Y6-W5a">
                                         <rect key="frame" x="8" y="66" width="359" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -270,24 +273,32 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tabbarCell" id="zwk-U8-8Zd">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tabbarCell" id="zwk-U8-8Zd" customClass="TabbarCollectionViewCell" customModule="Accesseable" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="-1" width="113" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="113" height="28"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRX-YA-kHi">
-                                                            <rect key="frame" x="8" y="-1" width="97" height="30"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4O-hI-ktV">
+                                                            <rect key="frame" x="0.0" y="4" width="113" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                            <state key="normal" title="Button"/>
-                                                        </button>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </view>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <outlet property="lblCategorie" destination="z4O-hI-ktV" id="A0R-a9-niA"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="qBG-Xr-pZD"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Pbo-bK-tcr"/>
+                                        </connections>
                                     </collectionView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.090196078431372548" green="0.40392156862745099" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
@@ -302,14 +313,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="9bK-jX-VST" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Aa7-Se-yiq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9bK-jX-VST" secondAttribute="trailing" constant="-16" id="PpN-gH-hNt"/>
                             <constraint firstItem="SqA-EY-Knv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="jlh-hw-ayP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9bK-jX-VST" secondAttribute="bottom" id="jzL-EG-xMT"/>
+                            <constraint firstItem="9bK-jX-VST" firstAttribute="top" secondItem="SqA-EY-Knv" secondAttribute="bottom" constant="8" id="naL-t1-j0f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SqA-EY-Knv" secondAttribute="trailing" constant="-16" id="rEY-nB-Ykq"/>
                             <constraint firstItem="SqA-EY-Knv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="tuF-el-93x"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" selectedImage="home.png" systemItem="search" id="4MC-CE-C2l"/>
                     <connections>
-                        <outlet property="CategorieCollection" destination="wnV-nM-WwJ" id="hvI-bb-Tbo"/>
+                        <outlet property="CategorieCollection" destination="9bK-jX-VST" id="DRy-c2-DYN"/>
+                        <outlet property="searchbar" destination="8eX-p0-xMR" id="aKu-Bp-TAx"/>
                         <outlet property="tabBarCollection" destination="08h-Y6-W5a" id="dcN-Ws-cgK"/>
                     </connections>
                 </viewController>
@@ -402,7 +418,6 @@
     </scenes>
     <resources>
         <image name="Info.png" width="32" height="32"/>
-        <image name="POI.png" width="128" height="128"/>
         <image name="accesseable.png" width="1000" height="1000"/>
         <image name="home.png" width="600" height="599"/>
         <image name="myMarker.png" width="32" height="32"/>
