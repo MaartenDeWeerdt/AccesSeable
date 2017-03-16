@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		41B418021E792D8B0048D49B /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B418011E792D8B0048D49B /* CustomPointAnnotation.swift */; };
+		41B418061E7A83070048D49B /* InfoS.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B418051E7A83070048D49B /* InfoS.png */; };
+		41B418081E7A83120048D49B /* parkingS.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B418071E7A83120048D49B /* parkingS.png */; };
+		41B4180A1E7A831B0048D49B /* POIS.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B418091E7A831B0048D49B /* POIS.png */; };
+		41B4180E1E7A83380048D49B /* SanitairS.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B4180D1E7A83380048D49B /* SanitairS.png */; };
+		41B418101E7A83450048D49B /* tramS.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B4180F1E7A83450048D49B /* tramS.png */; };
+		41B418121E7A83500048D49B /* ZZZS.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B418111E7A83500048D49B /* ZZZS.png */; };
+		41B418141E7A84290048D49B /* RestaurantS.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B418131E7A84290048D49B /* RestaurantS.png */; };
 		41CB60E31E72A70100575A32 /* ASea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41CB60E11E72A70100575A32 /* ASea.xcdatamodeld */; };
 		41F44AD71E78022600AA58E3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F44AD61E78022600AA58E3 /* MapViewController.swift */; };
 		41F44AD91E78180500AA58E3 /* MapPOIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F44AD81E78180500AA58E3 /* MapPOIs.swift */; };
@@ -96,6 +103,13 @@
 /* Begin PBXFileReference section */
 		419280F51E7689BF0010D833 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		41B418011E792D8B0048D49B /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPointAnnotation.swift; sourceTree = "<group>"; };
+		41B418051E7A83070048D49B /* InfoS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InfoS.png; sourceTree = "<group>"; };
+		41B418071E7A83120048D49B /* parkingS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parkingS.png; sourceTree = "<group>"; };
+		41B418091E7A831B0048D49B /* POIS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = POIS.png; sourceTree = "<group>"; };
+		41B4180D1E7A83380048D49B /* SanitairS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SanitairS.png; sourceTree = "<group>"; };
+		41B4180F1E7A83450048D49B /* tramS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tramS.png; sourceTree = "<group>"; };
+		41B418111E7A83500048D49B /* ZZZS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZZZS.png; sourceTree = "<group>"; };
+		41B418131E7A84290048D49B /* RestaurantS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RestaurantS.png; sourceTree = "<group>"; };
 		41CB60E21E72A70100575A32 /* ASea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASea.xcdatamodel; sourceTree = "<group>"; };
 		41F44AD61E78022600AA58E3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		41F44AD81E78180500AA58E3 /* MapPOIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPOIs.swift; sourceTree = "<group>"; };
@@ -203,6 +217,13 @@
 		512A42DA1E72AB9F00A6FC4F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				41B418051E7A83070048D49B /* InfoS.png */,
+				41B418071E7A83120048D49B /* parkingS.png */,
+				41B418091E7A831B0048D49B /* POIS.png */,
+				41B4180D1E7A83380048D49B /* SanitairS.png */,
+				41B4180F1E7A83450048D49B /* tramS.png */,
+				41B418131E7A84290048D49B /* RestaurantS.png */,
+				41B418111E7A83500048D49B /* ZZZS.png */,
 				512A42DB1E72AD3900A6FC4F /* about.png */,
 				512A42DC1E72AD3900A6FC4F /* abt.png */,
 				512A42DD1E72AD3900A6FC4F /* accesseable.png */,
@@ -297,9 +318,9 @@
 				51F403EE1E72A57600B11946 /* AppDelegate.swift */,
 				51B2DC101E784A380051549A /* detailViewController.swift */,
 				51F403F01E72A57600B11946 /* ViewController.swift */,
+				5103D6CB1E7A881C001AC218 /* TabbarCollectionViewCell.swift */,
 				51218AF71E77E0E100D4F2F5 /* TableViewRow.swift */,
 				51218AF31E77DD6300D4F2F5 /* TableViewCell.swift */,
-				5103D6CB1E7A881C001AC218 /* TabbarCollectionViewCell.swift */,
 				51218AF51E77DDEE00D4F2F5 /* CollectionViewCell.swift */,
 				41F44AD61E78022600AA58E3 /* MapViewController.swift */,
 				41F44AD81E78180500AA58E3 /* MapPOIs.swift */,
@@ -382,6 +403,7 @@
 				512A43481E72AD3A00A6FC4F /* RecenteLocatie.png in Resources */,
 				512A43361E72AD3A00A6FC4F /* m1.png in Resources */,
 				512A432E1E72AD3A00A6FC4F /* helling.png in Resources */,
+				41B418081E7A83120048D49B /* parkingS.png in Resources */,
 				512A43441E72AD3A00A6FC4F /* profielTop.png in Resources */,
 				512A43331E72AD3A00A6FC4F /* label_a_neutraal.jpg in Resources */,
 				512A432F1E72AD3A00A6FC4F /* home.png in Resources */,
@@ -404,6 +426,7 @@
 				512A43471E72AD3A00A6FC4F /* recent.png in Resources */,
 				512A43451E72AD3A00A6FC4F /* profile.png in Resources */,
 				512A43431E72AD3A00A6FC4F /* POI.png in Resources */,
+				41B4180A1E7A831B0048D49B /* POIS.png in Resources */,
 				512A433C1E72AD3A00A6FC4F /* min.png in Resources */,
 				512A43201E72AD3900A6FC4F /* addFavoriet.png in Resources */,
 				512A43521E72AD3A00A6FC4F /* voldoet.png in Resources */,
@@ -411,17 +434,22 @@
 				512A431F1E72AD3900A6FC4F /* accesseable.png in Resources */,
 				512A43591E72AD3A00A6FC4F /* vorig.png in Resources */,
 				512A431E1E72AD3900A6FC4F /* abt.png in Resources */,
+				41B4180E1E7A83380048D49B /* SanitairS.png in Resources */,
+				41B418141E7A84290048D49B /* RestaurantS.png in Resources */,
 				512A43531E72AD3A00A6FC4F /* voldoetNiet.png in Resources */,
 				512A432B1E72AD3A00A6FC4F /* Erasmus.png in Resources */,
 				51F403F91E72A57600B11946 /* Assets.xcassets in Resources */,
 				512A43411E72AD3A00A6FC4F /* plus_inv.png in Resources */,
 				512A43311E72AD3A00A6FC4F /* Info.png in Resources */,
+				41B418121E7A83500048D49B /* ZZZS.png in Resources */,
 				512A43211E72AD3900A6FC4F /* Apptile.png in Resources */,
 				512A43241E72AD3A00A6FC4F /* bike.png in Resources */,
 				512A434D1E72AD3A00A6FC4F /* settings.png in Resources */,
 				512A43511E72AD3A00A6FC4F /* tram.png in Resources */,
 				51C622391E77F74B0076803E /* Info.plist in Resources */,
 				512A43231E72AD3900A6FC4F /* bg_min.jpg in Resources */,
+				41B418101E7A83450048D49B /* tramS.png in Resources */,
+				41B418061E7A83070048D49B /* InfoS.png in Resources */,
 				512A434C1E72AD3A00A6FC4F /* search.png in Resources */,
 				512A432A1E72AD3A00A6FC4F /* duim_rood.png in Resources */,
 				51F403F41E72A57600B11946 /* Main.storyboard in Resources */,
