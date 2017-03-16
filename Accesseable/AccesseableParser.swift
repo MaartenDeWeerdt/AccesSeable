@@ -33,14 +33,17 @@ public class JSONParser{
                 //strings omzetten waar nodig
                
                 volgendeTram.stop_id = jsonObject.value(forKey: "stop_id") as? String
-                volgendeTram.naam = jsonObject.value(forKey: "naam") as? String
+                volgendeTram.naam = jsonObject.value(forKey: "stop_name") as? String
+                volgendeTram.lat = jsonObject.value(forKey: "stop_lat") as! String?
+                 volgendeTram.lon = jsonObject.value(forKey: "stop_lon") as! String?
                 //rest keys nog niet geparset
             }
         } catch  {
             print("Fout bij binnenhalen van de tram data")
         
         }}
-        func parseRestaurants( context:NSManagedObjectContext)
+    
+    func parseRestaurants( context:NSManagedObjectContext)
         {
             //waar staan de gegevens
             let url = URL(string:"http://web10.weopendata.com/measurements/reca")

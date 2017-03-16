@@ -12,19 +12,29 @@ import CoreData
 class detailViewController: UIViewController {
 
     @IBOutlet weak var ivFeature: UIImageView!
+
+      var objectPassed:NSManagedObject?
+
     
-    @IBOutlet weak var tvFeature: UITextView!
-    var objectPassed:Reca?
+    @IBOutlet weak var lbladress: UITextField!
     
+    @IBOutlet weak var lblregio: UITextField!
+    @IBOutlet weak var lblfax: UITextField!
+    @IBOutlet weak var lblgsm: UITextField!
+    @IBOutlet weak var lblmail: UITextField!
+    @IBOutlet weak var lbltel: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the vi
-        //connexion needed,can fail so try catch
-        
-        do {
+        lbladress.text = objectPassed?.value(forKey: "adres_straat") as? String
+        // lbltel.text = objectPassed?.tel
+        //lblmail.text = objectPassed?.mail
+        //lblgsm.text = objectPassed?.gsm
+         //lblfax.text = objectPassed?.fax
+       // lblregio.text = objectPassed?.regio
+   do {
             //adress to image
-            let url = URL.init(string:(objectPassed?.regio)!)
+            let url = URL.init(string:(objectPassed?.value(forKey: "http://www.westkans.be/download/foto/LOG-052a.JPG"))! as! String)
             //convert url tot data
             let data = try Data.init(contentsOf: url!)
             //convert data to image
@@ -35,23 +45,17 @@ class detailViewController: UIViewController {
         } catch  {
             
         }
+     
+     
+              }
+       
+        
  
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
+
+
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
