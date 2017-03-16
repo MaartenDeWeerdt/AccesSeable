@@ -26,6 +26,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     var category = ["Restaurants", "Hotels", "Infokantoren", "Parkings", "Toiletten", "Tramhaltes", "Interessante locaties", "Dijken"]
     
+    var categoryDAO:CategoryDAO = CategoryDAO.init()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -266,7 +268,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "mapCell")!
         
-        cell.textLabel?.text = category[indexPath.row]
+        cell.textLabel?.text = categoryDAO.categoryList[indexPath.row].naam
+        cell.imageView?.image = categoryDAO.categoryList[indexPath.row].afbeelding
         
         
         return cell
