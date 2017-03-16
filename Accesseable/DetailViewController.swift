@@ -21,9 +21,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lblgsm: UITextField!
     @IBOutlet weak var lbltel: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         scrollview.contentSize = CGSize.init(width: 375, height: 3000)
         
         lblNaam.text = objectPassed?.value(forKey: "naam") as? String
@@ -35,7 +36,7 @@ class DetailViewController: UIViewController {
          lblregio.text = objectPassed?.value(forKey: "REGIO") as! String?
          */
         
-        if(objectPassed?.value(forKey: "url_picture_main") != nil)
+        if(objectPassed?.value(forKey: "url_picture_main") as! String != "")
         {
             do {
                 //adress to image
