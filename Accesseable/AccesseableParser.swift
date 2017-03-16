@@ -242,6 +242,7 @@ public class JSONParser{
                 interessanteLocatie.adres_straat = jsonObject.value(forKey: "ADRES_STRAAT") as? String
                 interessanteLocatie.lat = jsonObject.value(forKey: "LAT") as? String
                 interessanteLocatie.lon = jsonObject.value(forKey: "LON") as? String
+                interessanteLocatie.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
                 //rest keys nog niet geparset
             }
         } catch  {
@@ -272,8 +273,11 @@ public class JSONParser{
                 //strings omzetten waar nodig
                 
                 dijken.naam = jsonObject.value(forKey: "NAAM") as? String
+                dijken.gemeente = jsonObject.value(forKey: "GEMEENTE") as? String
+                dijken.adres_locatie = jsonObject.value(forKey: "ADRES_LOCATIE") as? String
                 dijken.lat = jsonObject.value(forKey: "LAT") as? String
                 dijken.lon = jsonObject.value(forKey: "LON") as? String
+                dijken.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
                 //rest keys nog niet geparset
             }
         } catch  {

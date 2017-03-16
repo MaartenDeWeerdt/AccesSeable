@@ -39,6 +39,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView.tag == 1{
@@ -94,6 +98,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 }
                 else
                 {
+                    //als er geen foto is -> standaard foto
                     cell.imgFoto.image = #imageLiteral(resourceName: "Restaurant.png")
                 }
 
@@ -120,6 +125,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 }
                 else
                 {
+                    //als er geen foto is -> standaard foto
                     cell.imgFoto.image = #imageLiteral(resourceName: "home.png")
                 }
 
@@ -129,31 +135,133 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
                 cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
                 cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
+                
+                if(rows[selectedCat].items[indexPath.row].value(forKey: "url_picture_main") as? String != "")
+                {
+                    do {
+                        //adress to image
+                        let url = URL.init(string: (rows[selectedCat].items[indexPath.row].value(forKey: "url_picture_main") as? String)!)
+                        //convert url tot data
+                        let data = try Data.init(contentsOf: url!)
+                        //convert data to image
+                        cell.imgFoto.image = UIImage.init(data: data)
+                    } catch  {
+                        print("foto niet gevonden")
+                    }
+                }
+                else
+                {
+                    //als er geen foto is -> standaard foto
+                    cell.imgFoto.image = #imageLiteral(resourceName: "Info.png")
+                }
+
+                
             case 3:
                 //parkings
                 cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
                 cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
                 cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
                 
+                if(rows[selectedCat].items[indexPath.row].value(forKey: "url_picture_main") as? String != "")
+                {
+                    do {
+                        //adress to image
+                        let url = URL.init(string: (rows[selectedCat].items[indexPath.row].value(forKey: "url_picture_main") as? String)!)
+                        //convert url tot data
+                        let data = try Data.init(contentsOf: url!)
+                        //convert data to image
+                        cell.imgFoto.image = UIImage.init(data: data)
+                    } catch  {
+                        print("foto niet gevonden")
+                    }
+                }
+                else
+                {
+                    //als er geen foto is -> standaard foto
+                    cell.imgFoto.image = #imageLiteral(resourceName: "parking.png")
+                }
                 
             case 4:
                 //toiletten
                 cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
                 cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
                 cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
+                
+                if(rows[selectedCat].items[indexPath.row].value(forKey: "url_picture_main") as? String != "")
+                {
+                    do {
+                        //adress to image
+                        let url = URL.init(string: (rows[selectedCat].items[indexPath.row].value(forKey: "url_picture_main") as? String)!)
+                        //convert url tot data
+                        let data = try Data.init(contentsOf: url!)
+                        //convert data to image
+                        cell.imgFoto.image = UIImage.init(data: data)
+                    } catch  {
+                        print("foto niet gevonden")
+                    }
+                }
+                else
+                {
+                    //als er geen foto is -> standaard foto
+                    cell.imgFoto.image = #imageLiteral(resourceName: "Sanitair.png")
+                }
+                
             case 5:
                 //tramhaltes
                 cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
+                cell.imgFoto.image = #imageLiteral(resourceName: "tram.png")
             case 6:
                 //interessante locaties
                 cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
                 cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
                 cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
+                
+                
+                if(rows[selectedCat].items[indexPath.row].value(forKey: "url_picture_main") as? String != "")
+                {
+                    do {
+                        //adress to image
+                        let url = URL.init(string: (rows[selectedCat].items[indexPath.row].value(forKey: "url_picture_main") as? String)!)
+                        //convert url tot data
+                        let data = try Data.init(contentsOf: url!)
+                        //convert data to image
+                        cell.imgFoto.image = UIImage.init(data: data)
+                    } catch  {
+                        print("foto niet gevonden")
+                    }
+                }
+                else
+                {
+                    //als er geen foto is -> standaard foto
+                    cell.imgFoto.image = #imageLiteral(resourceName: "POI.png")
+                }
+                
             case 7:
                 //dijken
                 cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
-                cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
+                cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_locatie") as? String
                 cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
+                
+                if(rows[selectedCat].items[indexPath.row].value(forKey: "url_picture_main") as? String != "")
+                {
+                    do {
+                        //adress to image
+                        let url = URL.init(string: (rows[selectedCat].items[indexPath.row].value(forKey: "url_picture_main") as? String)!)
+                        //convert url tot data
+                        let data = try Data.init(contentsOf: url!)
+                        //convert data to image
+                        cell.imgFoto.image = UIImage.init(data: data)
+                    } catch  {
+                        print("foto niet gevonden")
+                    }
+                }
+                else
+                {
+                    //als er geen foto is -> standaard foto
+                    cell.imgFoto.image = #imageLiteral(resourceName: "ZZZ.png")
+                }
+                
+                //komt normaal nooit voor
             default:
                 print("deze collectie bestaat niet")
             }
