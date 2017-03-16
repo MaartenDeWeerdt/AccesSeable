@@ -477,6 +477,7 @@
     <entity name="VPP" representedClassName="VPP" syncable="YES" codeGenerationType="class">
         <attribute name="adres_nr" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="adres_straat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deelgemeente" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="gemeente" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id_westkans" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lat" optional="YES" attributeType="String" syncable="YES"/>
@@ -512,6 +513,6 @@
         <element name="Reca" positionX="18" positionY="63" width="128" height="1500"/>
         <element name="Sanitair" positionX="-9" positionY="36" width="128" height="1200"/>
         <element name="Tram" positionX="0" positionY="45" width="128" height="210"/>
-        <element name="VPP" positionX="36" positionY="81" width="128" height="465"/>
+        <element name="VPP" positionX="36" positionY="81" width="128" height="480"/>
     </elements>
 </model>

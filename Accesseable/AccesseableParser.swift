@@ -32,7 +32,6 @@ public class JSONParser{
              
                 //strings omzetten waar nodig
                
-                volgendeTram.stop_id = jsonObject.value(forKey: "stop_id") as? String
                 volgendeTram.naam = jsonObject.value(forKey: "stop_name") as? String
                 volgendeTram.lat = jsonObject.value(forKey: "stop_lat") as? String
                 volgendeTram.lon = jsonObject.value(forKey: "stop_lon") as? String
@@ -62,12 +61,13 @@ public class JSONParser{
                   
                     
                     //strings omzetten waar nodig
-                   
-                    restaurant.adres_straat =  jsonObject.value(forKey: "ADRES_STRAAT") as? String
-                    restaurant.gemeente = jsonObject.value(forKey: "GEMEENTE") as? String
+                    
                     restaurant.naam = jsonObject.value(forKey: "NAAM") as? String
+                    restaurant.deelgemeente = jsonObject.value(forKey: "DEELGEMEENTE") as? String
+                    restaurant.adres_straat =  jsonObject.value(forKey: "ADRES_STRAAT") as? String
                     restaurant.lat = jsonObject.value(forKey: "LAT") as? String
                     restaurant.lon = jsonObject.value(forKey: "LON") as? String
+                    restaurant.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
                     //rest keys nog niet geparset
                 }
             } catch  {
@@ -96,10 +96,12 @@ func parseHotels( context:NSManagedObjectContext)
             
             //strings omzetten waar nodig
            
-            hotel.tel =  jsonObject.value(forKey: "TEL") as? String
             hotel.naam = jsonObject.value(forKey: "NAAM") as? String
+            hotel.deelgemeente = jsonObject.value(forKey: "DEELGEMEENTE") as? String
+            hotel.adres_straat = jsonObject.value(forKey: "ADRES_STRAAT") as? String
             hotel.lat = jsonObject.value(forKey: "LAT") as? String
             hotel.lon = jsonObject.value(forKey: "LON") as? String
+            hotel.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
             //rest keys nog niet geparset
         }
     } catch  {
@@ -128,11 +130,12 @@ func parseInfo( context:NSManagedObjectContext)
            
             //strings omzetten waar nodig
           
-            infoKantoren.adres_straat =  jsonObject.value(forKey: "ADRES_STRAAT") as? String
-            infoKantoren.gsm = jsonObject.value(forKey: "GSM") as? String
             infoKantoren.naam = jsonObject.value(forKey: "NAAM") as? String
+            infoKantoren.deelgemeente = jsonObject.value(forKey: "DEELGEMEENTE") as? String
+            infoKantoren.adres_straat =  jsonObject.value(forKey: "ADRES_STRAAT") as? String
             infoKantoren.lat = jsonObject.value(forKey: "LAT") as? String
             infoKantoren.lon = jsonObject.value(forKey: "LON") as? String
+            infoKantoren.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
             //rest keys nog niet geparset
         }
     } catch  {
@@ -163,11 +166,12 @@ func parseParking( context:NSManagedObjectContext)
             
             //strings omzetten waar nodig
           
-            parking.id_westkans = jsonObject.value(forKey: "ID_WESTKANS") as? String
-            parking.gemeente = jsonObject.value(forKey: "GEMEENTE") as? String
             parking.naam = jsonObject.value(forKey: "NAAM") as? String
+            parking.deelgemeente = jsonObject.value(forKey: "DEELGEMEENTE") as? String
+            parking.adres_straat = jsonObject.value(forKey: "ADRES_STRAAT") as? String
             parking.lat = jsonObject.value(forKey: "LAT") as? String
             parking.lon = jsonObject.value(forKey: "LON") as? String
+            parking.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
             //rest keys nog niet geparset
         }
     } catch  {
@@ -198,10 +202,12 @@ func parseToiletten( context:NSManagedObjectContext)
             
             //strings omzetten waar nodig
             
-            toilet.regio =  jsonObject.value(forKey: "REGIO") as? String
             toilet.naam = jsonObject.value(forKey: "NAAM") as? String
+            toilet.deelgemeente =  jsonObject.value(forKey: "DEELGEMEENTE") as? String
+            toilet.adres_straat = jsonObject.value(forKey: "ADRES_STRAAT") as? String
             toilet.lat = jsonObject.value(forKey: "LAT") as? String
             toilet.lon = jsonObject.value(forKey: "LON") as? String
+            toilet.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
             //rest keys nog niet geparset
         }
     } catch  {
@@ -230,9 +236,9 @@ func parsePOIs( context:NSManagedObjectContext)
             
             //strings omzetten waar nodig
           
-            interessanteLocatie.openingsuren = jsonObject.value(forKey: "OPENINGSUREN") as? String
-            interessanteLocatie.mail = jsonObject.value(forKey: "MAIL") as? String
             interessanteLocatie.naam = jsonObject.value(forKey: "NAAM") as? String
+            interessanteLocatie.deelgemeente = jsonObject.value(forKey: "DEELGEMEENTE") as? String
+            interessanteLocatie.adres_straat = jsonObject.value(forKey: "ADRES_STRAAT") as? String
             interessanteLocatie.lat = jsonObject.value(forKey: "LAT") as? String
             interessanteLocatie.lon = jsonObject.value(forKey: "LON") as? String
             //rest keys nog niet geparset
@@ -264,8 +270,6 @@ func parseDijken( context:NSManagedObjectContext)
             
             //strings omzetten waar nodig
            
-            dijken.adres_locatie =  jsonObject.value(forKey: "ADRES_LOCATIE") as? String
-            dijken.type = jsonObject.value(forKey: "TYPE") as? String
             dijken.naam = jsonObject.value(forKey: "NAAM") as? String
             dijken.lat = jsonObject.value(forKey: "LAT") as? String
             dijken.lon = jsonObject.value(forKey: "LON") as? String

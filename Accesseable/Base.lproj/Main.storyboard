@@ -152,7 +152,7 @@
                                         <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
                                         <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="rKN-gT-G3z"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="awx-ai-fpO"/>
                                         </connections>
                                     </searchBar>
                                     <collectionView clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="08h-Y6-W5a">
@@ -275,7 +275,7 @@
                     <tabBarItem key="tabBarItem" selectedImage="home.png" systemItem="search" id="4MC-CE-C2l"/>
                     <connections>
                         <outlet property="CategorieCollection" destination="9bK-jX-VST" id="DRy-c2-DYN"/>
-                        <outlet property="searchbar" destination="8eX-p0-xMR" id="aKu-Bp-TAx"/>
+                        <outlet property="searchBar" destination="8eX-p0-xMR" id="091-pn-6Fm"/>
                         <outlet property="tabBarCollection" destination="08h-Y6-W5a" id="dcN-Ws-cgK"/>
                     </connections>
                 </viewController>
