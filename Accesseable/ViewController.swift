@@ -62,23 +62,30 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell") as! TableViewCell
-        
-        cell.items = rows[indexPath.section].items
-        print("cell made")
-        
-        return cell
-    }
-   
-    
-    
-    //tabbar
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categorieën.count
+         if collectionView.tag == 1{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tabbarCell", for: indexPath) as! TabbarCollectionViewCell
+            cell.lblCategorie.text = rows[indexPath.row].title
+            return cell
+        }
+        else
+        {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
+            switch selectedCat {
+            case 0:
+                cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
+                cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
+                cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
+            case 1:
+                cell.lblNaam.text = rows[selectedCat].items[indexPath.row].value(forKey: "naam") as? String
+                cell.lblAdres.text = rows[selectedCat].items[indexPath.row].value(forKey: "adres_straat") as? String
+                cell.lblGemeente.text = rows[selectedCat].items[indexPath.row].value(forKey: "gemeente") as? String
+            default:
+                print("deze collectie bestaat niet")
+            }
+            return cell
+            
+        }
+
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
