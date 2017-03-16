@@ -69,7 +69,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wkr-ss-Fuh">
-                                <rect key="frame" x="0.0" y="359" width="359" height="259"/>
+                                <rect key="frame" x="0.0" y="359" width="359" height="308"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="359" id="VaC-Wz-nYQ"/>
@@ -110,95 +110,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="220" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JwJ-9E-aDR">
-                                <rect key="frame" x="16" y="108" width="343" height="502"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableCell" id="Lyi-nx-xvf" customClass="TableViewCell" customModule="Accesseable" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="220"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lyi-nx-xvf" id="bMY-mh-ak6">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="220"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" keyboardDismissMode="onDrag" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnV-nM-WwJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="219"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="uwc-eY-u2y">
-                                                        <size key="itemSize" width="130" height="179"/>
-                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                        <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
-                                                    </collectionViewFlowLayout>
-                                                    <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="UMH-wJ-Mag" customClass="CollectionViewCell" customModule="Accesseable" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="20" width="130" height="179"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="130" height="179"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjD-gM-FRI">
-                                                                        <rect key="frame" x="0.0" y="86" width="130" height="45"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="POI.png" translatesAutoresizingMaskIntoConstraints="NO" id="mUd-uT-03H">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="82"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tP-J4-sqv">
-                                                                        <rect key="frame" x="0.0" y="139" width="130" height="17"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls4-1N-vKF">
-                                                                        <rect key="frame" x="0.0" y="156" width="130" height="15"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </view>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                            <connections>
-                                                                <outlet property="lblNaam" destination="DjD-gM-FRI" id="0Az-AU-S9L"/>
-                                                                <segue destination="dRe-zt-HTV" kind="show" id="vzE-wK-Ogt"/>
-                                                            </connections>
-                                                        </collectionViewCell>
-                                                    </cells>
-                                                    <connections>
-                                                        <outlet property="dataSource" destination="Lyi-nx-xvf" id="tmZ-oo-6kU"/>
-                                                        <outlet property="delegate" destination="Lyi-nx-xvf" id="uY0-Kh-43p"/>
-                                                    </connections>
-                                                </collectionView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="wnV-nM-WwJ" firstAttribute="leading" secondItem="bMY-mh-ak6" secondAttribute="leading" id="9qo-Te-WeL"/>
-                                                <constraint firstAttribute="bottom" secondItem="wnV-nM-WwJ" secondAttribute="bottom" id="Iaq-0d-G4w"/>
-                                                <constraint firstAttribute="trailing" secondItem="wnV-nM-WwJ" secondAttribute="trailing" id="R2P-po-ARr"/>
-                                                <constraint firstItem="wnV-nM-WwJ" firstAttribute="top" secondItem="bMY-mh-ak6" secondAttribute="top" id="SwY-Yk-u5k"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hAH-up-Seu"/>
-                                </connections>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SqA-EY-Knv">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" text="Test" translatesAutoresizingMaskIntoConstraints="NO" id="8eX-p0-xMR">
                                         <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="rKN-gT-G3z"/>
+                                        </connections>
                                     </searchBar>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="08h-Y6-W5a">
+                                    <collectionView clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="08h-Y6-W5a">
                                         <rect key="frame" x="8" y="66" width="359" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -209,24 +131,32 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tabbarCell" id="zwk-U8-8Zd">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tabbarCell" id="zwk-U8-8Zd" customClass="TabbarCollectionViewCell" customModule="Accesseable" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="-1" width="113" height="28"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="113" height="28"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRX-YA-kHi">
-                                                            <rect key="frame" x="8" y="-1" width="97" height="30"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4O-hI-ktV">
+                                                            <rect key="frame" x="0.0" y="4" width="113" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                            <state key="normal" title="Button"/>
-                                                        </button>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </view>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <outlet property="lblCategorie" destination="z4O-hI-ktV" id="A0R-a9-niA"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="qBG-Xr-pZD"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Pbo-bK-tcr"/>
+                                        </connections>
                                     </collectionView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.090196078431372548" green="0.40392156862745099" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
@@ -238,76 +168,79 @@
                                     <constraint firstItem="8eX-p0-xMR" firstAttribute="leading" secondItem="SqA-EY-Knv" secondAttribute="leading" id="jLF-ct-lGr"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" keyboardDismissMode="onDrag" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnV-nM-WwJ">
-                                <rect key="frame" x="16" y="108" width="343" height="502"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9bK-jX-VST">
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="23" minimumInteritemSpacing="23" id="uwc-eY-u2y">
-                                    <size key="itemSize" width="150" height="221"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9Sn-Wn-UqX">
+                                    <size key="itemSize" width="171" height="227"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="5" minY="10" maxX="5" maxY="5"/>
+                                    <inset key="sectionInset" minX="10" minY="5" maxX="10" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="UMH-wJ-Mag" customClass="CollectionViewCell" customModule="Accesseable" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="10" width="155" height="220"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="N0I-1A-nRQ" customClass="CollectionViewCell" customModule="Accesseable" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="5" width="171" height="227"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="155" height="220"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="171" height="227"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjD-gM-FRI">
-                                                    <rect key="frame" x="0.0" y="121" width="155" height="39"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="POI.png" translatesAutoresizingMaskIntoConstraints="NO" id="mUd-uT-03H">
-                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="131"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ite-VR-e56">
+                                                    <rect key="frame" x="0.0" y="0.0" width="171" height="127"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ls4-1N-vKF">
-                                                    <rect key="frame" x="0.0" y="197" width="155" height="15"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hallo mijn naam is Maarten en deze tekst staat op 3 lijnen in de mooiste app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHt-PB-gF6">
+                                                    <rect key="frame" x="0.0" y="130" width="171" height="49"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tP-J4-sqv">
-                                                    <rect key="frame" x="0.0" y="180" width="155" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tuyaertsstraat 19 blablablablablabla" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FE-qX-W6C">
+                                                    <rect key="frame" x="0.0" y="177" width="171" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brussel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sz-nq-kxU">
+                                                    <rect key="frame" x="0.0" y="211" width="171" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <size key="customSize" width="155" height="220"/>
                                         <connections>
-                                            <outlet property="imgFoto" destination="mUd-uT-03H" id="NPJ-Hv-hd0"/>
-                                            <outlet property="lblNaam" destination="DjD-gM-FRI" id="0Az-AU-S9L"/>
-                                            <segue destination="dRe-zt-HTV" kind="show" id="vzE-wK-Ogt"/>
+                                            <outlet property="imgFoto" destination="Ite-VR-e56" id="Iml-tZ-zKS"/>
+                                            <outlet property="lblAdres" destination="0FE-qX-W6C" id="eJ4-0L-Z3G"/>
+                                            <outlet property="lblGemeente" destination="2sz-nq-kxU" id="N8g-UE-dyl"/>
+                                            <outlet property="lblNaam" destination="uHt-PB-gF6" id="3ss-vp-lVe"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="JqK-DB-s3h"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="d5z-xI-Ija"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="XY8-Uj-mRx"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3Ef-Kg-Dxy"/>
                                 </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="9bK-jX-VST" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Aa7-Se-yiq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9bK-jX-VST" secondAttribute="trailing" constant="-16" id="PpN-gH-hNt"/>
                             <constraint firstItem="SqA-EY-Knv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="jlh-hw-ayP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9bK-jX-VST" secondAttribute="bottom" id="jzL-EG-xMT"/>
+                            <constraint firstItem="9bK-jX-VST" firstAttribute="top" secondItem="SqA-EY-Knv" secondAttribute="bottom" constant="8" id="naL-t1-j0f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SqA-EY-Knv" secondAttribute="trailing" constant="-16" id="rEY-nB-Ykq"/>
                             <constraint firstItem="SqA-EY-Knv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="tuF-el-93x"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" selectedImage="home.png" systemItem="search" id="4MC-CE-C2l"/>
                     <connections>
-                        <outlet property="CategorieCollection" destination="wnV-nM-WwJ" id="hvI-bb-Tbo"/>
+                        <outlet property="CategorieCollection" destination="9bK-jX-VST" id="DRy-c2-DYN"/>
+                        <outlet property="searchbar" destination="8eX-p0-xMR" id="aKu-Bp-TAx"/>
                         <outlet property="tabBarCollection" destination="08h-Y6-W5a" id="dcN-Ws-cgK"/>
                     </connections>
                 </viewController>
@@ -400,7 +333,6 @@
     </scenes>
     <resources>
         <image name="Info.png" width="32" height="32"/>
-        <image name="POI.png" width="128" height="128"/>
         <image name="accesseable.png" width="1000" height="1000"/>
         <image name="home.png" width="600" height="599"/>
         <image name="myMarker.png" width="32" height="32"/>

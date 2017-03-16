@@ -10,13 +10,14 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    var categorieën = ["Restaurants","Hotels", "Infokantoren", "Parkings", "Toiletten", "Tramhaltes", "Interessante locaties", "Dijken"]
-    
     var rows = [TableViewRow]()
-    //var items:NSObject
+    var selectedCat:Int = 0
     
     @IBOutlet weak var tabBarCollection: UICollectionView!
     @IBOutlet weak var CategorieCollection: UICollectionView!
+    @IBOutlet weak var searchbar: UISearchBar!
+    
+    
     
     
     override func viewDidLoad() {
@@ -39,67 +40,56 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        if rows[section].title == "Restaurants" {
-            return rows[section].items.count
+        if collectionView.tag == 1{
+            return rows.count
         }
-        return 0
+        else
+        {
+            
+            return rows[selectedCat].items.count
+
+        }
+        
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return rows.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
-
-        cell.backgroundColor = UIColor.blue
-        //let object:NSObject = (items[indexPath.row])
-        cell.lblNaam.text = rows[indexPath.section].items[indexPath.row].value(forKey: "naam") as! String
+        if collectionView.tag == 1{
+            return 1
+        }
+        else
+        {
+            return 1
+        }
         
-        return cell
-    }
-
-    /*
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return rows.count
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return rows[section].title
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell") as! TableViewCell
-        
-        cell.items = rows[indexPath.section].items
-        print("cell made")
-        
-        return cell
-    }
-    
-    
-    //tabbar
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categorieën.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let tabbar = collectionView.dequeueReusableCell(withReuseIdentifier: "tabbarCell", for: indexPath)
+        if collectionView.tag == 1{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tabbarCell", for: indexPath) as! TabbarCollectionViewCell
+            cell.lblCategorie.text = rows[indexPath.row].title
+            return cell
+        }
+        else
+        {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
+            
+            cell.backgroundColor = UIColor.blue
+            //let object:NSObject = (items[indexPath.row])
+            cell.lblNaam.text = rows[indexPath.section].items[indexPath.row].value(forKey: "naam") as? String
+            cell.lblAdres.text = rows[indexPath.section].items[indexPath.row].value(forKey: "adres_straat") as? String
+            cell.lblGemeente.text = rows[indexPath.section].items[indexPath.row].value(forKey: "gemeente") as? String
+            return cell
+        }
         
-        
-        return tabbar
     }
- */
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView.tag == 1{
+            selectedCat = indexPath.section
+        
+            CategorieCollection.reloadData()
+        }
+    }
 }
 
