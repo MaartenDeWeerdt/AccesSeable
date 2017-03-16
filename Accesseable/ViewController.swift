@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -127,5 +128,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             CategorieCollection.reloadData()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailViewController = segue.destination as! DetailViewController
+        let cell = sender as! CollectionViewCell
+        
+        let index:IndexPath = CategorieCollection.indexPath(for: cell)!
+        
+        detailViewController.objectPassed = rows[selectedCat].items[index.row]
+    }
+    
 }
 

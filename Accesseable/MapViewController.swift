@@ -80,7 +80,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     // Pokemon
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    func locationManager(manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
     }
     // Pokemon
