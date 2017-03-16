@@ -8,12 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     var categorieën = ["Restaurants","Hotels", "Infokantoren", "Parkings", "Toiletten", "Tramhaltes", "Interessante locaties", "Dijken"]
     
     var rows = [TableViewRow]()
+    //var items:NSObject
+    
     @IBOutlet weak var tabBarCollection: UICollectionView!
+    @IBOutlet weak var CategorieCollection: UICollectionView!
     
     
     override func viewDidLoad() {
@@ -23,22 +26,40 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         rows.append(TableViewRow.init(title: "Hotels", items: DAO.sharedDAO.getAllHotels()))
         rows.append(TableViewRow.init(title: "Infokantoren", items: DAO.sharedDAO.getAllInfo()))
         rows.append(TableViewRow.init(title: "Parkings", items: DAO.sharedDAO.getAllParkings()))
-        
-        
-        /*
         rows.append(TableViewRow.init(title: "Toiletten", items: DAO.sharedDAO.getAllSanitair()))
         rows.append(TableViewRow.init(title: "Tramhaltes", items: DAO.sharedDAO.getAllTrams()!))
         rows.append(TableViewRow.init(title: "Interessante locaties", items: DAO.sharedDAO.getAllPOIs()!))
         rows.append(TableViewRow.init(title: "Dijken", items: DAO.sharedDAO.getAllDijken()!))
- */
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if rows[section].title == "Restaurants" {
+            return rows[section].items.count
+        }
+        return 0
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return rows.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
+
+        cell.backgroundColor = UIColor.blue
+        //let object:NSObject = (items[indexPath.row])
+        cell.lblNaam.text = rows[indexPath.section].items[indexPath.row].value(forKey: "naam") as! String
+        
+        return cell
+    }
+
+    /*
     func numberOfSections(in tableView: UITableView) -> Int {
         return rows.count
     }
@@ -73,10 +94,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let tabbar = collectionView.dequeueReusableCell(withReuseIdentifier: "tabbar", for: indexPath)
+        
+        let tabbar = collectionView.dequeueReusableCell(withReuseIdentifier: "tabbarCell", for: indexPath)
+        
         
         return tabbar
     }
+ */
 
 }
 

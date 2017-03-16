@@ -10,5 +10,10 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var imgFoto: UIImageView!
     @IBOutlet weak var lblNaam: UILabel!
+    @IBOutlet weak var lblAdres: UILabel!
+    @IBOutlet weak var lblGemeente: UILabel!
+    
+    
 }

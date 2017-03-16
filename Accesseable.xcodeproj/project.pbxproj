@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41B418021E792D8B0048D49B /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B418011E792D8B0048D49B /* CustomPointAnnotation.swift */; };
 		41CB60E31E72A70100575A32 /* ASea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41CB60E11E72A70100575A32 /* ASea.xcdatamodeld */; };
 		41F44AD71E78022600AA58E3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F44AD61E78022600AA58E3 /* MapViewController.swift */; };
 		41F44AD91E78180500AA58E3 /* MapPOIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F44AD81E78180500AA58E3 /* MapPOIs.swift */; };
@@ -93,6 +94,7 @@
 
 /* Begin PBXFileReference section */
 		419280F51E7689BF0010D833 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		41B418011E792D8B0048D49B /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPointAnnotation.swift; sourceTree = "<group>"; };
 		41CB60E21E72A70100575A32 /* ASea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASea.xcdatamodel; sourceTree = "<group>"; };
 		41F44AD61E78022600AA58E3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		41F44AD81E78180500AA58E3 /* MapPOIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPOIs.swift; sourceTree = "<group>"; };
@@ -243,10 +245,10 @@
 				512A43041E72AD3900A6FC4F /* recent_Kleur.png */,
 				512A43051E72AD3900A6FC4F /* recent.png */,
 				512A43061E72AD3900A6FC4F /* RecenteLocatie.png */,
-				512A43071E72AD3900A6FC4F /* Restaurant.png */,
 				512A43081E72AD3900A6FC4F /* Sanitair.png */,
 				512A43091E72AD3900A6FC4F /* search_transp_white.png */,
 				512A430A1E72AD3900A6FC4F /* search.png */,
+				512A43071E72AD3900A6FC4F /* Restaurant.png */,
 				512A430B1E72AD3900A6FC4F /* settings.png */,
 				512A430C1E72AD3900A6FC4F /* sleep.png */,
 				512A430D1E72AD3900A6FC4F /* spinner.png */,
@@ -303,6 +305,7 @@
 				51F403FA1E72A57600B11946 /* LaunchScreen.storyboard */,
 				51F403FD1E72A57600B11946 /* Info.plist */,
 				41CB60E11E72A70100575A32 /* ASea.xcdatamodeld */,
+				41B418011E792D8B0048D49B /* CustomPointAnnotation.swift */,
 			);
 			path = Accesseable;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				51F403EF1E72A57600B11946 /* AppDelegate.swift in Sources */,
 				41CB60E31E72A70100575A32 /* ASea.xcdatamodeld in Sources */,
 				51218AF41E77DD6300D4F2F5 /* TableViewCell.swift in Sources */,
+				41B418021E792D8B0048D49B /* CustomPointAnnotation.swift in Sources */,
 				41F44AD91E78180500AA58E3 /* MapPOIs.swift in Sources */,
 				51B2DC111E784A380051549A /* detailViewController.swift in Sources */,
 			);
