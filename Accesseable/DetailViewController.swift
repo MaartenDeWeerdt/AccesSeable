@@ -16,24 +16,44 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var scrollview: UIScrollView!
     @IBOutlet weak var imgImage: UIImageView!
     @IBOutlet weak var lblNaam: UILabel!
-    @IBOutlet weak var lblMail: UILabel!
-      @IBOutlet weak var lblAdress: UILabel!
+    @IBOutlet weak var lblStraat: UILabel!
+    @IBOutlet weak var lblGemeente: UILabel!
+    @IBOutlet weak var lblPostcode: UILabel!
+    @IBOutlet weak var lblAdres_Nummer: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //plaatsen navigatiebar
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        scrollview.contentSize = CGSize.init(width: 375, height: 3000)
+        //scrollview.contentSize = CGSize.init(width: 375, height: 3000)
+        
+        //vullen labels
+        
         
         lblNaam.text = objectPassed?.value(forKey: "naam") as? String
-        lblAdress.text = objectPassed?.value(forKey: "adres_straat") as! String?
-        lblMail.text = objectPassed?.value(forKey: "mail") as! String?
+        lblStraat.text = objectPassed?.value(forKey: "adres_straat") as! String?
+        
+        //tram en dijk hebben geen deelgemeente -> code aanpassen
+        lblGemeente.text = objectPassed?.value(forKey: "deelgemeente") as! String?
+        
+        //tram heeft geen postcode -> code aanpassen
+        lblPostcode.text = objectPassed?.value(forKey: "postcode") as! String?
+        
+        //tram en dijken hebben geen adres nummer
+        lblAdres_Nummer.text = objectPassed?.value(forKey: "adres_nr") as! String?
+        
         /*
-         lbladress.text = objectPassed?.value(forKey: "ADRES_STRAAT") as? String
+        lblMail.text = objectPassed?.value(forKey: "mail") as! String?
+        
          lbltel.text = objectPassed?.value(forKey: "TEL") as! String?
          lblgsm.text = objectPassed?.value(forKey: "GSM") as! String?
          lblfax.text = objectPassed?.value(forKey: "FAX") as! String?
          lblregio.text = objectPassed?.value(forKey: "REGIO") as! String?
-         */
-        
+ 
+        */
+        //vullen image
+        //tram heeft geen foto -> aanpassen
         if(objectPassed?.value(forKey: "url_picture_main") as! String != "")
         {
             do {
@@ -50,12 +70,7 @@ class DetailViewController: UIViewController {
                 
             }
         }
-        
-        
     }
-    
-    
-    
 }
 
 

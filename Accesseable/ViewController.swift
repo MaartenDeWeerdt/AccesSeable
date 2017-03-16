@@ -289,8 +289,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         detailViewController.objectPassed = rows[selectedCat].items[index.row]
     }
     
+    
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
+        
+        CategorieCollection.reloadData()
     }
     
 }

@@ -86,7 +86,7 @@
         <attribute name="parking_ondergrond_materiaal_score" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="parking_orientatie" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="parking_score" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pnr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postcode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="regio" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="score" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subtype" optional="YES" attributeType="String" syncable="YES"/>
@@ -235,7 +235,7 @@
         <attribute name="parking_ondergrond_materiaal_score" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="parking_orientatie" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="parking_score" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pnr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postcode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="regio" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="score" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subtype" optional="YES" attributeType="String" syncable="YES"/>
@@ -333,7 +333,7 @@
         <attribute name="parking_ondergrond_materiaal_score" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="parking_orientatie" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="parking_score" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pnr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postcode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="regio" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="score" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tel" optional="YES" attributeType="String" syncable="YES"/>
@@ -417,7 +417,7 @@
         <attribute name="lon" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="naam" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="openingsuren" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pnr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postcode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="regio" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="score" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subtype" optional="YES" attributeType="String" syncable="YES"/>

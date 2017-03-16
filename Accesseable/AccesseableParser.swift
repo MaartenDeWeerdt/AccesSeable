@@ -69,6 +69,8 @@ public class JSONParser{
                 restaurant.lat = jsonObject.value(forKey: "LAT") as? String
                 restaurant.lon = jsonObject.value(forKey: "LON") as? String
                 restaurant.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
+                restaurant.postcode = jsonObject.value(forKey: "PNR") as? String
+                restaurant.adres_nr = jsonObject.value(forKey: "ADRES_NR") as? String
                 //rest keys nog niet geparset
             }
         } catch  {
@@ -103,6 +105,9 @@ public class JSONParser{
                 hotel.lat = jsonObject.value(forKey: "LAT") as? String
                 hotel.lon = jsonObject.value(forKey: "LON") as? String
                 hotel.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
+                hotel.postcode = jsonObject.value(forKey: "POSTCODE") as? String
+                hotel.adres_nr = jsonObject.value(forKey: "ADRES_NR") as? String
+                
                 //rest keys nog niet geparset
             }
         } catch  {
@@ -137,6 +142,8 @@ public class JSONParser{
                 infoKantoren.lat = jsonObject.value(forKey: "LAT") as? String
                 infoKantoren.lon = jsonObject.value(forKey: "LON") as? String
                 infoKantoren.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
+                infoKantoren.postcode = jsonObject.value(forKey: "PNR") as? String
+                infoKantoren.adres_nr = jsonObject.value(forKey: "ADRES_NR") as? String
                 //rest keys nog niet geparset
             }
         } catch  {
@@ -168,11 +175,13 @@ public class JSONParser{
                 //strings omzetten waar nodig
                 
                 parking.naam = jsonObject.value(forKey: "NAAM") as? String
-                //parking.deelgemeente = jsonObject.value(forKey: "DEELGEMEENTE") as? String
+                parking.deelgemeente = jsonObject.value(forKey: "DEELGEMEENTE") as? String
                 parking.adres_straat = jsonObject.value(forKey: "ADRES_STRAAT") as? String
                 parking.lat = jsonObject.value(forKey: "LAT") as? String
                 parking.lon = jsonObject.value(forKey: "LON") as? String
                 parking.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
+                parking.postcode = jsonObject.value(forKey: "POSTCODE") as? String
+                parking.adres_nr = jsonObject.value(forKey: "ADRES_NR") as? String
                 //rest keys nog niet geparset
             }
         } catch  {
@@ -209,6 +218,8 @@ public class JSONParser{
                 toilet.lat = jsonObject.value(forKey: "LAT") as? String
                 toilet.lon = jsonObject.value(forKey: "LON") as? String
                 toilet.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
+                toilet.postcode = jsonObject.value(forKey: "PNR") as? String
+                toilet.adres_nr = jsonObject.value(forKey: "ADRES_NR") as? String
                 //rest keys nog niet geparset
             }
         } catch  {
@@ -243,6 +254,8 @@ public class JSONParser{
                 interessanteLocatie.lat = jsonObject.value(forKey: "LAT") as? String
                 interessanteLocatie.lon = jsonObject.value(forKey: "LON") as? String
                 interessanteLocatie.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
+                interessanteLocatie.postcode = jsonObject.value(forKey: "PNR") as? String
+                interessanteLocatie.adres_nr = jsonObject.value(forKey: "ADRES_NR") as? String
                 //rest keys nog niet geparset
             }
         } catch  {
@@ -278,6 +291,7 @@ public class JSONParser{
                 dijken.lat = jsonObject.value(forKey: "LAT") as? String
                 dijken.lon = jsonObject.value(forKey: "LON") as? String
                 dijken.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
+                dijken.postcode = jsonObject.value(forKey: "POSTCODE") as? String
                 //rest keys nog niet geparset
             }
         } catch  {
