@@ -105,7 +105,7 @@
                                         <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
                                         <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="rKN-gT-G3z"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="awx-ai-fpO"/>
                                         </connections>
                                     </searchBar>
                                     <collectionView clipsSubviews="YES" tag="1" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="08h-Y6-W5a">

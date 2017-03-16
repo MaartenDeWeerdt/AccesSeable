@@ -17,7 +17,6 @@
 		41B418141E7A84290048D49B /* RestaurantS.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B418131E7A84290048D49B /* RestaurantS.png */; };
 		41CB60E31E72A70100575A32 /* ASea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41CB60E11E72A70100575A32 /* ASea.xcdatamodeld */; };
 		41F44AD71E78022600AA58E3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F44AD61E78022600AA58E3 /* MapViewController.swift */; };
-		41F44AD91E78180500AA58E3 /* MapPOIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F44AD81E78180500AA58E3 /* MapPOIs.swift */; };
 		5103D6CC1E7A881C001AC218 /* TabbarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5103D6CB1E7A881C001AC218 /* TabbarCollectionViewCell.swift */; };
 		51218AF41E77DD6300D4F2F5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51218AF31E77DD6300D4F2F5 /* TableViewCell.swift */; };
 		51218AF61E77DDEE00D4F2F5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51218AF51E77DDEE00D4F2F5 /* CollectionViewCell.swift */; };
@@ -111,7 +110,6 @@
 		41B418131E7A84290048D49B /* RestaurantS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RestaurantS.png; sourceTree = "<group>"; };
 		41CB60E21E72A70100575A32 /* ASea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASea.xcdatamodel; sourceTree = "<group>"; };
 		41F44AD61E78022600AA58E3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		41F44AD81E78180500AA58E3 /* MapPOIs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPOIs.swift; sourceTree = "<group>"; };
 		5103D6CB1E7A881C001AC218 /* TabbarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabbarCollectionViewCell.swift; path = ../TabbarCollectionViewCell.swift; sourceTree = "<group>"; };
 		51218AF31E77DD6300D4F2F5 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		51218AF51E77DDEE00D4F2F5 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -320,7 +318,6 @@
 				51218AF31E77DD6300D4F2F5 /* TableViewCell.swift */,
 				51218AF51E77DDEE00D4F2F5 /* CollectionViewCell.swift */,
 				41F44AD61E78022600AA58E3 /* MapViewController.swift */,
-				41F44AD81E78180500AA58E3 /* MapPOIs.swift */,
 				41B418011E792D8B0048D49B /* CustomPointAnnotation.swift */,
 				51F403F21E72A57600B11946 /* Main.storyboard */,
 				51F403F81E72A57600B11946 /* Assets.xcassets */,
@@ -489,7 +486,6 @@
 				41CB60E31E72A70100575A32 /* ASea.xcdatamodeld in Sources */,
 				51218AF41E77DD6300D4F2F5 /* TableViewCell.swift in Sources */,
 				41B418021E792D8B0048D49B /* CustomPointAnnotation.swift in Sources */,
-				41F44AD91E78180500AA58E3 /* MapPOIs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
