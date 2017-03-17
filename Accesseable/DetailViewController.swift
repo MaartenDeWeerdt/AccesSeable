@@ -70,6 +70,7 @@ class DetailViewController: UIViewController {
             lblStraat.text = objectPassed?.value(forKey: "adres_locatie") as! String?
             lblGemeente.text = objectPassed?.value(forKey: "gemeente") as! String?
             lblPostcode.text = objectPassed?.value(forKey: "postcode") as! String?
+            lblAdres_Nummer.text = ""
 
             if(objectPassed?.value(forKey: "url_picture_main") as! String != "")
             {
