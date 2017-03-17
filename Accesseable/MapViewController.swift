@@ -43,14 +43,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func viewWillAppear(_ animated: Bool) {
         
         locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
-        mapview.delegate = self
-        mapview.mapType = MKMapType.standard
+        //mapview.delegate = self
+        //mapview.mapType = MKMapType.standard
         mapview.showsUserLocation = true
-        
-        
         
     }
     
@@ -73,7 +72,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let userLocation:CLLocation = locations[0] as CLLocation
         locationManager.stopUpdatingLocation()
@@ -89,7 +88,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     
     // Pokemon
-    func locationManager(manager: CLLocationManager, didFailWithError error: Error) {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
     }
     // Pokemon
