@@ -25,15 +25,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
+        //array vullen met de items en een titel
+        
         rows.append(TableViewRow.init(title: "Restaurants", items: DAO.sharedDAO.getAllRestaurants()!))
         rows.append(TableViewRow.init(title: "Hotels", items: DAO.sharedDAO.getAllHotels()))
         rows.append(TableViewRow.init(title: "Infokantoren", items: DAO.sharedDAO.getAllInfo()))
-        //rows.append(TableViewRow.init(title: "Parkings", items: DAO.sharedDAO.getAllParkings()))
         rows.append(TableViewRow.init(title: "Toiletten", items: DAO.sharedDAO.getAllSanitair()))
         rows.append(TableViewRow.init(title: "Tramhaltes", items: DAO.sharedDAO.getAllTrams()!))
         rows.append(TableViewRow.init(title: "POI", items: DAO.sharedDAO.getAllPOIs()!))
         rows.append(TableViewRow.init(title: "Dijken", items: DAO.sharedDAO.getAllDijken()!))
         
+        //lijst met gefilterde items vullen
         gefilterdeCollectie = rows[selectedCat].items
         
     }
@@ -48,17 +50,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
+        //tag 1 is de tabbar, tag 2 is de lijst
         if collectionView.tag == 1{
             return rows.count
         }
         else
         {
-            //volledige lijst returnen
+            //gefilterde lijst returnen
             return gefilterdeCollectie.count
         }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+        //tag 1 is de tabbar, tag 2 is de lijst
         if collectionView.tag == 1{
             return 1
         }
@@ -69,27 +73,22 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-         if collectionView.tag == 1{
+        //tag 1 is de tabbar, tag 2 is de lijst
+        if collectionView.tag == 1{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tabbarCell", for: indexPath) as! TabbarCollectionViewCell
             cell.lblCategorie.text = rows[indexPath.row].title
             return cell
         }
         else
         {
-            var item:NSManagedObject
-
-            item = gefilterdeCollectie[indexPath.row]
-
             
-            //let item = gefilterdeCollectie[indexPath.row]
+            var item:NSManagedObject
+            item = gefilterdeCollectie[indexPath.row]
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
             
-            //als searchcontroller actief en niet leeg is -> filteren, anders niet
-            
+            //case per categorie
             switch selectedCat {
-                
             case 0:
                 //restaurants
                 cell.lblNaam.text = item.value(forKey: "naam") as? String
@@ -114,8 +113,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     //als er geen foto is -> standaard foto
                     cell.imgFoto.image = #imageLiteral(resourceName: "Restaurant.png")
                 }
-
-                
                 
             case 1:
                 //hotels
@@ -142,7 +139,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     cell.imgFoto.image = #imageLiteral(resourceName: "home.png")
                 }
 
-                
             case 2:
                 //infokantoren
                 cell.lblNaam.text = item.value(forKey: "naam") as? String
@@ -168,9 +164,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     cell.imgFoto.image = #imageLiteral(resourceName: "Info.png")
                 }
 
-                
-
-                
             case 3:
                 //toiletten
                 cell.lblNaam.text = item.value(forKey: "naam") as? String
@@ -199,13 +192,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             case 4:
                 //tramhaltes
                 cell.lblNaam.text = item.value(forKey: "naam") as? String
+                //tramhaltes hebben geen afbeelding in de entiteit
                 cell.imgFoto.image = #imageLiteral(resourceName: "tram.png")
+                
             case 5:
                 //interessante locaties
                 cell.lblNaam.text = item.value(forKey: "naam") as? String
                 cell.lblAdres.text = item.value(forKey: "adres_straat") as? String
                 cell.lblGemeente.text = item.value(forKey: "deelgemeente") as? String
-                
                 
                 if(item.value(forKey: "url_picture_main") as? String != "")
                 {
@@ -251,14 +245,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     cell.imgFoto.image = #imageLiteral(resourceName: "ZZZ.png")
                 }
                 
-                //komt normaal nooit voor
+                //default komt normaal nooit voor
             default:
                 print("deze collectie bestaat niet")
             }
             return cell
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //als in de tabbar een andere categorie wordt aangeduid past de collectie automatisch aan
+        
         if collectionView.tag == 1{
             selectedCat = indexPath.row
             gefilterdeCollectie = rows[selectedCat].items
@@ -267,6 +265,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
+    //doorsturen naar detailscherm
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailViewController = segue.destination as! DetailViewController
         let cell = sender as! CollectionViewCell
@@ -291,6 +290,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         CategorieCollection.reloadData()
     }
     
+    //zoekbalk laten verdwijnen bij het drukken op cancel
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }

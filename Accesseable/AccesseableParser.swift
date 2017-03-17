@@ -35,6 +35,7 @@ public class JSONParser{
                 volgendeTram.naam = jsonObject.value(forKey: "stop_name") as? String
                 volgendeTram.lat = jsonObject.value(forKey: "stop_lat") as! String?
                 volgendeTram.lon = jsonObject.value(forKey: "stop_lon") as! String?
+                volgendeTram.weelchair_boarding = jsonObject.value(forKey: "wheelchair_boarding") as? String
                 //rest keys nog niet geparset
             }
         } catch  {
@@ -151,43 +152,6 @@ public class JSONParser{
         }
     }
     
-    func parseParking( context:NSManagedObjectContext)
-    {
-        //waar staan de gegevens
-        let url = URL(string: "http://web10.weopendata.com/measurements/vpp")
-        //exceptions mogelijk bv. geen internet
-        do {
-            //data binnentrekken van url en in array opslaan
-            let jsonData = try Data(contentsOf: url!)
-            let jsonArray:NSArray = try JSONSerialization.jsonObject(with: jsonData) as! NSArray
-            
-            //elk item in array overlopen om gegevens uit te halen
-            for item in jsonArray {
-                
-                let jsonObject:NSDictionary = item as! NSDictionary
-                //entiteit aanmaken, context = verwijzing naar waar opgeslaan
-                
-                
-                
-                let parking = VPP(context: context)
-                
-                
-                //strings omzetten waar nodig
-                
-                parking.naam = jsonObject.value(forKey: "NAAM") as? String
-                parking.deelgemeente = jsonObject.value(forKey: "DEELGEMEENTE") as? String
-                parking.adres_straat = jsonObject.value(forKey: "ADRES_STRAAT") as? String
-                parking.lat = jsonObject.value(forKey: "LAT") as? String
-                parking.lon = jsonObject.value(forKey: "LON") as? String
-                parking.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
-                parking.postcode = jsonObject.value(forKey: "POSTCODE") as? String
-                parking.adres_nr = jsonObject.value(forKey: "ADRES_NR") as? String
-                //rest keys nog niet geparset
-            }
-        } catch  {
-            print("Fout bij binnenhalen van de parking data")
-        }
-    }
     func parseToiletten( context:NSManagedObjectContext)
     {
         //waar staan de gegevens

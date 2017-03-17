@@ -6,11 +6,13 @@
 //  Copyright © 2017 mobapp09. All rights reserved.
 //
 
+    /*
 import UIKit
 import CoreData
  //var tableData = []
 class TableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
+
     var items:[NSManagedObject]?
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -75,8 +77,9 @@ class TableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionView
             cell.textLabel?.text = nomMorceau
         }     
         return cell
+ */
     }
-    */
+ 
     
 }
-
+*/
