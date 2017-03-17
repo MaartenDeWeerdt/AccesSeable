@@ -92,7 +92,7 @@ public class DAO{
     }
     
     // MARK: - Core Data Fetch Request (parkings)
-    
+    /*
     func getAllParkings() -> [VPP]
     {
         let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "VPP")
@@ -106,6 +106,7 @@ public class DAO{
         
         return []
     }
+    */
     
     // MARK: - Core Data Fetch Request (sanitair)
     
