@@ -330,8 +330,8 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="IRU-rV-ZZJ">
-                                        <rect key="frame" x="20" y="278" width="334" height="61.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="IRU-rV-ZZJ" userLabel="Stack Adres">
+                                        <rect key="frame" x="20" y="277" width="334" height="61.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LA-JO-PIs">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
@@ -375,6 +375,47 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="IB0-tj-kkU" userLabel="Stack Contact">
+                                        <rect key="frame" x="20" y="363.5" width="334" height="123"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2e-y8-r0W">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMa-Te-PRN">
+                                                <rect key="frame" x="0.0" y="20.5" width="334" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSv-ik-rOK">
+                                                <rect key="frame" x="0.0" y="41" width="334" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hU-Nw-HHi">
+                                                <rect key="frame" x="0.0" y="61.5" width="334" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZV-5T-TEj">
+                                                <rect key="frame" x="0.0" y="82" width="334" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uU3-yL-ezp">
+                                                <rect key="frame" x="0.0" y="102.5" width="334" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="4mm-XA-wG7" firstAttribute="top" secondItem="EsK-Bm-Jpn" secondAttribute="bottom" constant="30" id="9X3-D3-8Nk"/>
@@ -385,8 +426,11 @@
                                     <constraint firstItem="EsK-Bm-Jpn" firstAttribute="top" secondItem="bDG-6d-KBc" secondAttribute="topMargin" constant="-70" id="JMN-if-ebz" userLabel="image top margin"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="4mm-XA-wG7" secondAttribute="trailing" constant="20" id="NZp-9h-Kvi"/>
                                     <constraint firstAttribute="bottom" secondItem="EsK-Bm-Jpn" secondAttribute="bottom" constant="759" id="S5g-mo-rrP" userLabel="image bottom margin"/>
+                                    <constraint firstItem="IB0-tj-kkU" firstAttribute="top" secondItem="IRU-rV-ZZJ" secondAttribute="bottom" constant="25" id="fBc-u8-vRK"/>
                                     <constraint firstAttribute="trailing" secondItem="EsK-Bm-Jpn" secondAttribute="trailing" id="gbu-sX-0by" userLabel="image trailing"/>
-                                    <constraint firstItem="IRU-rV-ZZJ" firstAttribute="top" secondItem="aeX-JF-KcC" secondAttribute="bottom" constant="36" id="tly-HH-mHt"/>
+                                    <constraint firstAttribute="trailing" secondItem="IB0-tj-kkU" secondAttribute="trailing" constant="20" id="ju7-ha-Wk2"/>
+                                    <constraint firstItem="IB0-tj-kkU" firstAttribute="leading" secondItem="bDG-6d-KBc" secondAttribute="leading" constant="20" id="r4d-MT-hqN"/>
+                                    <constraint firstItem="IRU-rV-ZZJ" firstAttribute="top" secondItem="aeX-JF-KcC" secondAttribute="bottom" constant="35" id="tly-HH-mHt"/>
                                     <constraint firstItem="EsK-Bm-Jpn" firstAttribute="leading" secondItem="bDG-6d-KBc" secondAttribute="leading" id="vRe-GY-QGg" userLabel="image leading"/>
                                 </constraints>
                             </scrollView>
@@ -402,11 +446,17 @@
                     <connections>
                         <outlet property="imgImage" destination="EsK-Bm-Jpn" id="L0e-bR-2Jn"/>
                         <outlet property="lblAdres_Nummer" destination="twr-M3-zMc" id="kkt-QU-ETI"/>
+                        <outlet property="lblContact" destination="Y2e-y8-r0W" id="hKv-Kh-tct"/>
+                        <outlet property="lblEmail" destination="UZV-5T-TEj" id="WCi-NE-2rS"/>
+                        <outlet property="lblFax" destination="7hU-Nw-HHi" id="jBY-Vb-3gl"/>
                         <outlet property="lblGemeente" destination="43A-My-fra" id="ydg-kz-6dS"/>
+                        <outlet property="lblGsm" destination="VSv-ik-rOK" id="Ql0-Xx-wkc"/>
                         <outlet property="lblNaam" destination="aeX-JF-KcC" id="dOr-tI-6F6"/>
                         <outlet property="lblPostcode" destination="b2X-3f-YDQ" id="iak-k2-hwF"/>
                         <outlet property="lblStraat" destination="e8w-TD-2lk" id="6x3-Pq-MdK"/>
+                        <outlet property="lblTel" destination="pMa-Te-PRN" id="tkl-LM-cpu"/>
                         <outlet property="lblTitel" destination="5LA-JO-PIs" id="31B-cW-dzS"/>
+                        <outlet property="lblWeb" destination="uU3-yL-ezp" id="2KW-qV-BoF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oq4-n5-Yku" userLabel="First Responder" sceneMemberID="firstResponder"/>
