@@ -21,6 +21,12 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lblGemeente: UILabel!
     @IBOutlet weak var lblPostcode: UILabel!
     @IBOutlet weak var lblAdres_Nummer: UILabel!
+    @IBOutlet weak var lblContact: UILabel!
+    @IBOutlet weak var lblTel: UILabel!
+    @IBOutlet weak var lblGsm: UILabel!
+    @IBOutlet weak var lblFax: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
+    @IBOutlet weak var lblWeb: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +54,12 @@ class DetailViewController: UIViewController {
             lblGemeente.text = ""
             lblPostcode.text = ""
             imgImage.image = #imageLiteral(resourceName: "tram.png")
+            lblWeb.text = ""
+            lblEmail.text = ""
+            lblFax.text = ""
+            lblGsm.text = ""
+            lblTel.text = ""
+            lblContact.text = ""
         }
             
         //dijk
@@ -69,7 +81,14 @@ class DetailViewController: UIViewController {
                 } catch  {}
             }
             else { imgImage.image = #imageLiteral(resourceName: "ZZZ.png") }
+            lblWeb.text = ""
+            lblEmail.text = ""
+            lblFax.text = ""
+            lblGsm.text = ""
+            lblTel.text = ""
+            lblContact.text = ""
         }
+            
         //restaurant
         else if objectPassed is Reca
         {
@@ -79,6 +98,17 @@ class DetailViewController: UIViewController {
             lblGemeente.text = objectPassed?.value(forKey: "deelgemeente") as! String?
             lblPostcode.text = objectPassed?.value(forKey: "postcode") as! String?
             lblAdres_Nummer.text = objectPassed?.value(forKey: "adres_nr") as! String?
+            lblContact.text = "Contact"
+            lblTel.text = "Tel.: "
+            lblTel.text?.append((objectPassed?.value(forKey: "tel") as? String)!)
+            lblGsm.text = "Gsm: "
+            lblGsm.text?.append((objectPassed?.value(forKey: "gsm") as? String)!)
+            lblFax.text = "Fax: "
+            lblFax.text?.append((objectPassed?.value(forKey: "fax") as? String)!)
+            lblEmail.text = "Email: "
+            lblEmail.text?.append((objectPassed?.value(forKey: "mail") as? String)!)
+            lblWeb.text = "Website: "
+            lblWeb.text?.append((objectPassed?.value(forKey: "web") as? String)!)
             
             if(objectPassed?.value(forKey: "url_picture_main") as! String != "")
             {
@@ -91,6 +121,7 @@ class DetailViewController: UIViewController {
             }
             else { imgImage.image = #imageLiteral(resourceName: "Restaurant.png") }
         }
+            
         //hotels
         else if objectPassed is Logies
         {
@@ -100,6 +131,17 @@ class DetailViewController: UIViewController {
             lblGemeente.text = objectPassed?.value(forKey: "deelgemeente") as! String?
             lblPostcode.text = objectPassed?.value(forKey: "postcode") as! String?
             lblAdres_Nummer.text = objectPassed?.value(forKey: "adres_nr") as! String?
+            lblContact.text = "Contact"
+            lblTel.text = "Tel.: "
+            lblTel.text?.append((objectPassed?.value(forKey: "tel") as? String)!)
+            lblGsm.text = "Gsm: "
+            lblGsm.text?.append((objectPassed?.value(forKey: "gsm") as? String)!)
+            lblFax.text = "Fax: "
+            lblFax.text?.append((objectPassed?.value(forKey: "fax") as? String)!)
+            lblEmail.text = "Email: "
+            lblEmail.text?.append((objectPassed?.value(forKey: "mail") as? String)!)
+            lblWeb.text = "Website: "
+            lblWeb.text?.append((objectPassed?.value(forKey: "web") as? String)!)
             
             if(objectPassed?.value(forKey: "url_picture_main") as! String != "")
             {
@@ -112,6 +154,7 @@ class DetailViewController: UIViewController {
             }
             else { imgImage.image = #imageLiteral(resourceName: "home.png") }
         }
+            
         //infokantoor
         else if objectPassed is Info
         {
@@ -121,6 +164,17 @@ class DetailViewController: UIViewController {
             lblGemeente.text = objectPassed?.value(forKey: "deelgemeente") as! String?
             lblPostcode.text = objectPassed?.value(forKey: "postcode") as! String?
             lblAdres_Nummer.text = objectPassed?.value(forKey: "adres_nr") as! String?
+            lblContact.text = "Contact"
+            lblTel.text = "Tel.: "
+            lblTel.text?.append((objectPassed?.value(forKey: "tel") as? String)!)
+            lblGsm.text = "Gsm: "
+            lblGsm.text?.append((objectPassed?.value(forKey: "gsm") as? String)!)
+            lblFax.text = "Fax: "
+            lblFax.text?.append((objectPassed?.value(forKey: "fax") as? String)!)
+            lblEmail.text = "Email: "
+            lblEmail.text?.append((objectPassed?.value(forKey: "mail") as? String)!)
+            lblWeb.text = "Website: "
+            lblWeb.text?.append((objectPassed?.value(forKey: "web") as? String)!)
             
             if(objectPassed?.value(forKey: "url_picture_main") as! String != "")
             {
@@ -133,6 +187,7 @@ class DetailViewController: UIViewController {
             }
             else { imgImage.image = #imageLiteral(resourceName: "Info.png") }
         }
+            
         //wc
         else if objectPassed is Sanitair
         {
@@ -153,7 +208,14 @@ class DetailViewController: UIViewController {
                 } catch  {}
             }
             else { imgImage.image = #imageLiteral(resourceName: "Sanitair.png") }
+            lblWeb.text = ""
+            lblEmail.text = ""
+            lblFax.text = ""
+            lblGsm.text = ""
+            lblTel.text = ""
+            lblContact.text = ""
         }
+            
         //Poi
         else if objectPassed is POI
         {
@@ -163,6 +225,18 @@ class DetailViewController: UIViewController {
             lblGemeente.text = objectPassed?.value(forKey: "deelgemeente") as! String?
             lblPostcode.text = objectPassed?.value(forKey: "postcode") as! String?
             lblAdres_Nummer.text = objectPassed?.value(forKey: "adres_nr") as! String?
+            lblContact.text = "Contact"
+            lblTel.text = "Tel.: "
+            lblTel.text?.append((objectPassed?.value(forKey: "tel") as? String)!)
+            lblGsm.text = "Gsm: "
+            lblGsm.text?.append((objectPassed?.value(forKey: "gsm") as? String)!)
+            lblFax.text = "Fax: "
+            lblFax.text?.append((objectPassed?.value(forKey: "fax") as? String)!)
+            lblEmail.text = "Email: "
+            lblEmail.text?.append((objectPassed?.value(forKey: "mail") as? String)!)
+            lblWeb.text = "Website: "
+            lblWeb.text?.append((objectPassed?.value(forKey: "web") as? String)!)
+            
             
             if(objectPassed?.value(forKey: "url_picture_main") as! String != "")
             {

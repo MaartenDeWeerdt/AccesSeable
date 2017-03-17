@@ -72,6 +72,11 @@ public class JSONParser{
                 restaurant.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
                 restaurant.postcode = jsonObject.value(forKey: "PNR") as? String
                 restaurant.adres_nr = jsonObject.value(forKey: "ADRES_NR") as? String
+                restaurant.fax = jsonObject.value(forKey: "FAX") as? String
+                restaurant.gsm = jsonObject.value(forKey: "GSM") as? String
+                restaurant.mail = jsonObject.value(forKey: "MAIL") as? String
+                restaurant.tel = jsonObject.value(forKey: "TEL") as? String
+                restaurant.web = jsonObject.value(forKey: "WEB") as? String
                 //rest keys nog niet geparset
             }
         } catch  {
@@ -108,6 +113,11 @@ public class JSONParser{
                 hotel.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
                 hotel.postcode = jsonObject.value(forKey: "POSTCODE") as? String
                 hotel.adres_nr = jsonObject.value(forKey: "ADRES_NR") as? String
+                hotel.fax = jsonObject.value(forKey: "FAX") as? String
+                hotel.gsm = jsonObject.value(forKey: "GSM") as? String
+                hotel.mail = jsonObject.value(forKey: "MAIL") as? String
+                hotel.tel = jsonObject.value(forKey: "TEL") as? String
+                hotel.web = jsonObject.value(forKey: "WEB") as? String
                 
                 //rest keys nog niet geparset
             }
@@ -145,7 +155,12 @@ public class JSONParser{
                 infoKantoren.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
                 infoKantoren.postcode = jsonObject.value(forKey: "PNR") as? String
                 infoKantoren.adres_nr = jsonObject.value(forKey: "ADRES_NR") as? String
-                //rest keys nog niet geparset
+                infoKantoren.fax = jsonObject.value(forKey: "FAX") as? String
+                infoKantoren.gsm = jsonObject.value(forKey: "GSM") as? String
+                infoKantoren.mail = jsonObject.value(forKey: "MAIL") as? String
+                infoKantoren.tel = jsonObject.value(forKey: "TEL") as? String
+                infoKantoren.web = jsonObject.value(forKey: "WEB") as? String
+
             }
         } catch  {
             print("Fout bij binnenhalen van de info data")
@@ -168,11 +183,7 @@ public class JSONParser{
                 let jsonObject:NSDictionary = item as! NSDictionary
                 //entiteit aanmaken, context = verwijzing naar waar opgeslaan
                 
-                
-                
                 let toilet = Sanitair(context: context)
-                
-                
                 
                 //strings omzetten waar nodig
                 
@@ -206,12 +217,9 @@ public class JSONParser{
                 let jsonObject:NSDictionary = item as! NSDictionary
                 //entiteit aanmaken, context = verwijzing naar waar opgeslaan
                 
-                
+
                 let interessanteLocatie = POI(context: context)
-                
-                
-                //strings omzetten waar nodig
-                
+
                 interessanteLocatie.naam = jsonObject.value(forKey: "NAAM") as? String
                 interessanteLocatie.deelgemeente = jsonObject.value(forKey: "DEELGEMEENTE") as? String
                 interessanteLocatie.adres_straat = jsonObject.value(forKey: "ADRES_STRAAT") as? String
@@ -220,6 +228,12 @@ public class JSONParser{
                 interessanteLocatie.url_picture_main = jsonObject.value(forKey: "URL_PICTURE_MAIN") as? String
                 interessanteLocatie.postcode = jsonObject.value(forKey: "PNR") as? String
                 interessanteLocatie.adres_nr = jsonObject.value(forKey: "ADRES_NR") as? String
+                interessanteLocatie.fax = jsonObject.value(forKey: "FAX") as? String
+                interessanteLocatie.gsm = jsonObject.value(forKey: "GSM") as? String
+                interessanteLocatie.mail = jsonObject.value(forKey: "MAIL") as? String
+                interessanteLocatie.tel = jsonObject.value(forKey: "TEL") as? String
+                interessanteLocatie.web = jsonObject.value(forKey: "WEB") as? String
+                
                 //rest keys nog niet geparset
             }
         } catch  {
