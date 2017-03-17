@@ -21,7 +21,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var locationManager = CLLocationManager()
     var pointAnnotation:CustomPointAnnotation!
     var pinAnnotationView:MKPinAnnotationView!
-    
     var checked = [Bool]()
     
     var category = ["Restaurants", "Hotels", "Infokantoren", "Parkings", "Toiletten", "Tramhaltes", "Interessante locaties", "Dijken"]
@@ -174,7 +173,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             let lonStr = Double(Info.lon!)
             annotation.coordinate = CLLocationCoordinate2DMake(latStr!, lonStr!)
             annotation.title = Info.naam
-            annotation.pinImageName = "InfoS"
+            annotation.pinImageName = "Info"
             
             mapview.addAnnotation(annotation)
             
@@ -266,10 +265,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "mapCell")!
+        let cell:MapFilterTableViewCell = tableView.dequeueReusableCell(withIdentifier: "mapCell")! as! MapFilterTableViewCell
         
-        cell.textLabel?.text = categoryDAO.categoryList[indexPath.row].naam
-        cell.imageView?.image = categoryDAO.categoryList[indexPath.row].afbeelding
+        cell.lblFilterNaam?.text = categoryDAO.categoryList[indexPath.row].naam
+        cell.lblFilterNaam?.textAlignment = .left
+        cell.ivFilterImage?.image = categoryDAO.categoryList[indexPath.row].afbeelding
         
         
         return cell
@@ -310,6 +310,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         
         mapview.removeAnnotations(mapview.annotations)
+        
+        
+        
+        
     }
     
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		416FC9C81E7BDBF10001B9FC /* MapFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416FC9C71E7BDBF10001B9FC /* MapFilterTableViewCell.swift */; };
 		41B418021E792D8B0048D49B /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B418011E792D8B0048D49B /* CustomPointAnnotation.swift */; };
 		41B418061E7A83070048D49B /* InfoS.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B418051E7A83070048D49B /* InfoS.png */; };
 		41B418081E7A83120048D49B /* parkingS.png in Resources */ = {isa = PBXBuildFile; fileRef = 41B418071E7A83120048D49B /* parkingS.png */; };
@@ -103,6 +104,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		416FC9C71E7BDBF10001B9FC /* MapFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapFilterTableViewCell.swift; sourceTree = "<group>"; };
 		419280F51E7689BF0010D833 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		41B418011E792D8B0048D49B /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPointAnnotation.swift; sourceTree = "<group>"; };
 		41B418051E7A83070048D49B /* InfoS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InfoS.png; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				516390611E7ADCC500B29AB8 /* DetailViewController.swift */,
 				41F44AD61E78022600AA58E3 /* MapViewController.swift */,
 				41B418011E792D8B0048D49B /* CustomPointAnnotation.swift */,
+				416FC9C71E7BDBF10001B9FC /* MapFilterTableViewCell.swift */,
 				51F403F21E72A57600B11946 /* Main.storyboard */,
 				51F403F81E72A57600B11946 /* Assets.xcassets */,
 				51F403FA1E72A57600B11946 /* LaunchScreen.storyboard */,
@@ -501,6 +504,7 @@
 				41CB60E31E72A70100575A32 /* ASea.xcdatamodeld in Sources */,
 				51218AF41E77DD6300D4F2F5 /* TableViewCell.swift in Sources */,
 				41B418021E792D8B0048D49B /* CustomPointAnnotation.swift in Sources */,
+				416FC9C81E7BDBF10001B9FC /* MapFilterTableViewCell.swift in Sources */,
 				41B418181E7B12B60048D49B /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
