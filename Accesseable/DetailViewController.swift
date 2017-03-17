@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var scrollview: UIScrollView!
     @IBOutlet weak var imgImage: UIImageView!
+    @IBOutlet weak var lblTitel: UILabel!
     @IBOutlet weak var lblNaam: UILabel!
     @IBOutlet weak var lblStraat: UILabel!
     @IBOutlet weak var lblGemeente: UILabel!
@@ -30,47 +31,76 @@ class DetailViewController: UIViewController {
         
         //vullen labels
         
-        
-        lblNaam.text = objectPassed?.value(forKey: "naam") as? String
-        lblStraat.text = objectPassed?.value(forKey: "adres_straat") as! String?
-        
-        //tram en dijk hebben geen deelgemeente -> code aanpassen
-        lblGemeente.text = objectPassed?.value(forKey: "deelgemeente") as! String?
-        
-        //tram heeft geen postcode -> code aanpassen
-        lblPostcode.text = objectPassed?.value(forKey: "postcode") as! String?
-        
-        //tram en dijken hebben geen adres nummer
-        lblAdres_Nummer.text = objectPassed?.value(forKey: "adres_nr") as! String?
-        
-        /*
-        lblMail.text = objectPassed?.value(forKey: "mail") as! String?
-        
-         lbltel.text = objectPassed?.value(forKey: "TEL") as! String?
-         lblgsm.text = objectPassed?.value(forKey: "GSM") as! String?
-         lblfax.text = objectPassed?.value(forKey: "FAX") as! String?
-         lblregio.text = objectPassed?.value(forKey: "REGIO") as! String?
- 
-        */
-        //vullen image
-        //tram heeft geen foto -> aanpassen
-        if(objectPassed?.value(forKey: "url_picture_main") as! String != "")
+        //tram
+        if objectPassed is Tram
         {
-            do {
-                //adress to image
-                let url = URL.init(string:(objectPassed?.value(forKey: "url_picture_main"))! as! String)
-                //convert url tot data
-                let data = try Data.init(contentsOf: url!)
-                //convert data to image
-                let image = UIImage.init(data: data)
-                
-                imgImage.image = image
-                
-            } catch  {
-                
+            lblNaam.text = objectPassed?.value(forKey: "naam") as? String
+            lblTitel.text = "Toegankelijkheid"
+            lblStraat.text = "Toegankelijk met rolstoel:"
+            imgImage.image = #imageLiteral(resourceName: "tram.png")
+        }
+            
+        //dijk
+        else if objectPassed is Dijk
+        {
+            lblTitel.text = "Adres"
+            lblNaam.text = objectPassed?.value(forKey: "naam") as? String
+            lblStraat.text = objectPassed?.value(forKey: "adres_locatie") as! String?
+            lblGemeente.text = objectPassed?.value(forKey: "gemeente") as! String?
+            lblPostcode.text = objectPassed?.value(forKey: "postcode") as! String?
+
+            if(objectPassed?.value(forKey: "url_picture_main") as! String != "")
+            {
+                do {
+                    let url = URL.init(string:(objectPassed?.value(forKey: "url_picture_main"))! as! String)
+                    let data = try Data.init(contentsOf: url!)
+                    let image = UIImage.init(data: data)
+                    imgImage.image = image
+                } catch  {}
+            }
+            else
+            {
+                imgImage.image = #imageLiteral(resourceName: "ZZZ.png")
             }
         }
-    }
+            
+        //de rest
+        else
+        {
+            lblNaam.text = objectPassed?.value(forKey: "naam") as? String
+            lblStraat.text = objectPassed?.value(forKey: "adres_straat") as! String?
+            
+            //tram en dijk hebben geen deelgemeente -> code aanpassen
+            lblGemeente.text = objectPassed?.value(forKey: "deelgemeente") as! String?
+            
+            //tram heeft geen postcode -> code aanpassen
+            lblPostcode.text = objectPassed?.value(forKey: "postcode") as! String?
+            
+            //tram en dijken hebben geen adres nummer
+            lblAdres_Nummer.text = objectPassed?.value(forKey: "adres_nr") as! String?
+            
+            if(objectPassed?.value(forKey: "url_picture_main") as! String != "")
+            {
+                do {
+                    //adress to image
+                    let url = URL.init(string:(objectPassed?.value(forKey: "url_picture_main"))! as! String)
+                    //convert url tot data
+                    let data = try Data.init(contentsOf: url!)
+                    //convert data to image
+                    let image = UIImage.init(data: data)
+                    
+                    imgImage.image = image
+                    
+                } catch  {
+                    
+                }
+            }
+
+        }
+        
+        //vullen image
+        //tram heeft geen foto -> aanpassen
+            }
 }
 
 
