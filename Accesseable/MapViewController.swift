@@ -47,9 +47,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
-        //mapview.delegate = self
-        //mapview.mapType = MKMapType.standard
+        mapview.delegate = self
+        mapview.mapType = MKMapType.standard
         mapview.showsUserLocation = true
+        
         
     }
     
@@ -62,13 +63,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
         switch status {
+            
         case .authorizedWhenInUse: mapview.showsUserLocation = true
         locationManager.startUpdatingLocation()
+            
         case .authorizedAlways: mapview.showsUserLocation = true
         locationManager.startUpdatingLocation()
+            
         case .denied: mapview.showsUserLocation = false
         print("computer says no")
+            
         default: break
+            
         }
     }
     
@@ -79,9 +85,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         let location = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
         
-        let span = MKCoordinateSpanMake(0.5, 0.5)
+        let span = MKCoordinateSpanMake(0.01, 0.01)
         
-        let region = MKCoordinateRegion (center:  location,span: span)
+        let region = MKCoordinateRegion (center: location,span: span)
         
         mapview.setRegion(region, animated: true)
     }
