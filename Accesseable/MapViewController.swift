@@ -18,10 +18,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     // variables
     var items:[NSManagedObject]?
     
+    var restaurantsAnnotations:[CustomPointAnnotation]?
+    var hotelsAnnotations:[CustomPointAnnotation]?
+    var infokantorenAnnotations:[CustomPointAnnotation]?
+    var toilettenAnnotations:[CustomPointAnnotation]?
+    var tramhaltesAnnotations:[CustomPointAnnotation]?
+    var poisAnnotations:[CustomPointAnnotation]?
+    var dijkAnnotations:[CustomPointAnnotation]?
+    
     var locationManager = CLLocationManager()
     var pointAnnotation:CustomPointAnnotation!
     var pinAnnotationView:MKPinAnnotationView!
-    var checked = [Bool]()
+    
     
     var category = ["Restaurants", "Hotels", "Infokantoren", "Parkings", "Toiletten", "Tramhaltes", "Interessante locaties", "Dijken"]
     
@@ -111,6 +119,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func createRestaurantsAnnotation()
     {
+        restaurantsAnnotations = [CustomPointAnnotation]()
+        
         for Reca in DAO.sharedDAO.getAllRestaurants()!
         {
             let annotation = CustomPointAnnotation()
@@ -122,14 +132,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             annotation.pinImageName = "RestaurantS"
             
             
-            mapview.addAnnotation(annotation)
+            restaurantsAnnotations?.append(annotation)
             
         }
+        
+        mapview.addAnnotations(restaurantsAnnotations!)
         
     }
     
     func createHotelsAnnotation()
     {
+        hotelsAnnotations = [CustomPointAnnotation]()
+        
         for Logies in DAO.sharedDAO.getAllHotels()
         {
             let annotation = CustomPointAnnotation()
@@ -141,12 +155,17 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             annotation.pinImageName = "HomeS"
             
             
-            mapview.addAnnotation(annotation)
+            hotelsAnnotations?.append(annotation)
         }
+        
+        mapview.addAnnotations(hotelsAnnotations!)
+        
     }
     
     func createTramsAnnotation()
     {
+        tramhaltesAnnotations = [CustomPointAnnotation]()
+        
         for Tram in DAO.sharedDAO.getAllTrams()!
         {
             let annotation = CustomPointAnnotation()
@@ -157,14 +176,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             annotation.title = Tram.naam
             annotation.pinImageName = "tramS"
             
-            mapview.addAnnotation(annotation)
+            tramhaltesAnnotations?.append(annotation)
             
         }
+        
+        mapview.addAnnotations(tramhaltesAnnotations!)
         
     }
     
     func createInfoAnnotation()
     {
+        infokantorenAnnotations = [CustomPointAnnotation]()
+        
         for Info in DAO.sharedDAO.getAllInfo()
         {
             let annotation = CustomPointAnnotation()
@@ -175,12 +198,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             annotation.title = Info.naam
             annotation.pinImageName = "Info"
             
-            mapview.addAnnotation(annotation)
+            infokantorenAnnotations?.append(annotation)
             
         }
         
+        mapview.addAnnotations(infokantorenAnnotations!)
+        
     }
     
+    /*
     func createParkingAnnotation()
     {
         for Parking in DAO.sharedDAO.getAllParkings()
@@ -198,9 +224,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
         
     }
+    */
     
     func createToilettenAnnotation()
     {
+        toilettenAnnotations = [CustomPointAnnotation]()
+        
         for Toilet in DAO.sharedDAO.getAllSanitair()
         {
             let annotation = CustomPointAnnotation()
@@ -211,14 +240,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             annotation.title = Toilet.naam
             annotation.pinImageName = "SanitairS"
             
-            mapview.addAnnotation(annotation)
+            toilettenAnnotations?.append(annotation)
             
         }
+        
+        mapview.addAnnotations(toilettenAnnotations!)
         
     }
     
     func createPOIsAnnotation()
     {
+        poisAnnotations = [CustomPointAnnotation]()
+        
         for POIs in DAO.sharedDAO.getAllPOIs()!
         {
             let annotation = CustomPointAnnotation()
@@ -229,14 +262,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             annotation.title = POIs.naam
             annotation.pinImageName = "POIS"
             
-            mapview.addAnnotation(annotation)
+            poisAnnotations?.append(annotation)
             
         }
+        
+        mapview.addAnnotations(poisAnnotations!)
         
     }
     
     func createDijkenAnnotation()
     {
+        dijkAnnotations = [CustomPointAnnotation]()
+        
         for Dijk in DAO.sharedDAO.getAllDijken()!
         {
             let annotation = CustomPointAnnotation()
@@ -247,9 +284,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             annotation.title = Dijk.naam
             annotation.pinImageName = "ZZZS"
             
-            mapview.addAnnotation(annotation)
+            dijkAnnotations?.append(annotation)
             
         }
+        
+        mapview.addAnnotations(dijkAnnotations!)
         
     }
     
@@ -288,18 +327,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             createInfoAnnotation()
             
         case 3:
-            createParkingAnnotation()
-            
-        case 4:
             createToilettenAnnotation()
             
-        case 5:
+        case 4:
             createTramsAnnotation()
             
-        case 6:
+        case 5:
             createPOIsAnnotation()
             
-        case 7:
+        case 6:
             createDijkenAnnotation()
             
         default:
@@ -309,10 +345,33 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         
-        mapview.removeAnnotations(mapview.annotations)
         
         
-        
+        switch indexPath.row {
+        case 0:
+            mapview.removeAnnotations(restaurantsAnnotations!)
+            
+        case 1:
+            mapview.removeAnnotations(hotelsAnnotations!)
+            
+        case 2:
+            mapview.removeAnnotations(infokantorenAnnotations!)
+            
+        case 3:
+            mapview.removeAnnotations(toilettenAnnotations!)
+            
+        case 4:
+            mapview.removeAnnotations(tramhaltesAnnotations!)
+            
+        case 5:
+            mapview.removeAnnotations(poisAnnotations!)
+            
+        case 6:
+            mapview.removeAnnotations(dijkAnnotations!)
+            
+        default:
+            print("Pin is niet verwijderd!")
+        }
         
     }
     
