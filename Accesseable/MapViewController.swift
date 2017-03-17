@@ -31,7 +31,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var pinAnnotationView:MKPinAnnotationView!
     
     
-    var category = ["Restaurants", "Hotels", "Infokantoren", "Parkings", "Toiletten", "Tramhaltes", "Interessante locaties", "Dijken"]
+    var category = ["Restaurants", "Hotels", "Infokantoren", "Toiletten", "Tramhaltes", "Interessante locaties", "Dijken"]
     
     var categoryDAO:CategoryDAO = CategoryDAO.init()
     
