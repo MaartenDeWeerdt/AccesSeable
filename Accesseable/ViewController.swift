@@ -13,7 +13,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     var rows = [TableViewRow]()
     var selectedCat:Int = 0
-    let searchController = UISearchController(searchResultsController: nil)
     var gefilterdeCollectie = [NSManagedObject]()
     
     @IBOutlet weak var tabBarCollection: UICollectionView!
@@ -95,7 +94,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 //restaurants
                 cell.lblNaam.text = item.value(forKey: "naam") as? String
                 cell.lblAdres.text = item.value(forKey: "adres_straat") as? String
-                cell.lblGemeente.text = item.value(forKey: "gemeente") as? String
+                cell.lblGemeente.text = item.value(forKey: "deelgemeente") as? String
                 
                 if(item.value(forKey: "url_picture_main") as? String != "")
                 {
@@ -122,7 +121,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 //hotels
                 cell.lblNaam.text = item.value(forKey: "naam") as? String
                 cell.lblAdres.text = item.value(forKey: "adres_straat") as? String
-                cell.lblGemeente.text = item.value(forKey: "gemeente") as? String
+                cell.lblGemeente.text = item.value(forKey: "deelgemeente") as? String
                 
                 if(item.value(forKey: "url_picture_main") as? String != "")
                 {
@@ -148,7 +147,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 //infokantoren
                 cell.lblNaam.text = item.value(forKey: "naam") as? String
                 cell.lblAdres.text = item.value(forKey: "adres_straat") as? String
-                cell.lblGemeente.text = item.value(forKey: "gemeente") as? String
+                cell.lblGemeente.text = item.value(forKey: "deelgemeente") as? String
                 
                 if(item.value(forKey: "url_picture_main") as? String != "")
                 {
@@ -170,36 +169,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 }
 
                 
+
+                
             case 3:
-                //parkings
-                cell.lblNaam.text = item.value(forKey: "naam") as? String
-                cell.lblAdres.text = item.value(forKey: "adres_straat") as? String
-                cell.lblGemeente.text = item.value(forKey: "gemeente") as? String
-                
-                if(item.value(forKey: "url_picture_main") as? String != "")
-                {
-                    do {
-                        //adress to image
-                        let url = URL.init(string: (item.value(forKey: "url_picture_main") as? String)!)
-                        //convert url tot data
-                        let data = try Data.init(contentsOf: url!)
-                        //convert data to image
-                        cell.imgFoto.image = UIImage.init(data: data)
-                    } catch  {
-                        print("foto niet gevonden")
-                    }
-                }
-                else
-                {
-                    //als er geen foto is -> standaard foto
-                    cell.imgFoto.image = #imageLiteral(resourceName: "parking.png")
-                }
-                
-            case 4:
                 //toiletten
                 cell.lblNaam.text = item.value(forKey: "naam") as? String
                 cell.lblAdres.text = item.value(forKey: "adres_straat") as? String
-                cell.lblGemeente.text = item.value(forKey: "gemeente") as? String
+                cell.lblGemeente.text = item.value(forKey: "deelgemeente") as? String
                 
                 if(item.value(forKey: "url_picture_main") as? String != "")
                 {
@@ -220,15 +196,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     cell.imgFoto.image = #imageLiteral(resourceName: "Sanitair.png")
                 }
                 
-            case 5:
+            case 4:
                 //tramhaltes
                 cell.lblNaam.text = item.value(forKey: "naam") as? String
                 cell.imgFoto.image = #imageLiteral(resourceName: "tram.png")
-            case 6:
+            case 5:
                 //interessante locaties
                 cell.lblNaam.text = item.value(forKey: "naam") as? String
                 cell.lblAdres.text = item.value(forKey: "adres_straat") as? String
-                cell.lblGemeente.text = item.value(forKey: "gemeente") as? String
+                cell.lblGemeente.text = item.value(forKey: "deelgemeente") as? String
                 
                 
                 if(item.value(forKey: "url_picture_main") as? String != "")
@@ -250,7 +226,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     cell.imgFoto.image = #imageLiteral(resourceName: "POI.png")
                 }
                 
-            case 7:
+            case 6:
                 //dijken
                 cell.lblNaam.text = item.value(forKey: "naam") as? String
                 cell.lblAdres.text = item.value(forKey: "adres_locatie") as? String
@@ -280,15 +256,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 print("deze collectie bestaat niet")
             }
             return cell
-            
         }
-
     }
-    
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView.tag == 1{
             selectedCat = indexPath.row
+            gefilterdeCollectie = rows[selectedCat].items
         
             CategorieCollection.reloadData()
         }
@@ -318,7 +291,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         CategorieCollection.reloadData()
     }
     
-    
-    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
 }
 
