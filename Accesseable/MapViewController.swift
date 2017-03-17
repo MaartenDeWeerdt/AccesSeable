@@ -309,7 +309,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         
-        //mapview.removeAnnotations(mapview.annotations)
+        mapview.removeAnnotations(mapview.annotations)
         
         
         
