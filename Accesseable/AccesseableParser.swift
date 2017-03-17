@@ -35,6 +35,7 @@ public class JSONParser{
                 volgendeTram.naam = jsonObject.value(forKey: "stop_name") as? String
                 volgendeTram.lat = jsonObject.value(forKey: "stop_lat") as! String?
                 volgendeTram.lon = jsonObject.value(forKey: "stop_lon") as! String?
+                volgendeTram.weelchair_boarding = jsonObject.value(forKey: "wheelchair_boarding") as? String
                 //rest keys nog niet geparset
             }
         } catch  {
