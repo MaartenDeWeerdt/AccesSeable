@@ -14,3 +14,4 @@ class CustomPointAnnotation: MKPointAnnotation {
     var pinImageName:String!
     
 }
+
